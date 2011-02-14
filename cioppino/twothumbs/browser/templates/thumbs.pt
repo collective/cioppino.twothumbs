@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone">
+
+<tal:comment tal:replace="nothing">
+    A lot of javascript relies on classes and structure to be present. Before 
+    changing anything, please check that twothumbs.js isn't expecting it.
+</tal:comment>
+<div tal:define="stats view/getStats;
+                 canRate view/canRate;
+                 myVote view/myVote;"
+                 class="thumb-rating">
+    <form action="you-know-you-like-it" method="post"
+        tal:attributes="class python:canRate and 'enabled' or 'disabled';
+                        action  string:${context/id}/you-know-you-like-it;">
+        <span
+            tal:attributes="class   python:'thumbs-up' + (myVote==1 and ' selected' or '')">
+            <input type="submit" name="form.lovinit" value="Like" 
+                class="allowMultiSubmit like-button"
+                tal:attributes="id  string:${context/id}_submit_like;
+                                    disabled python:not canRate and 'disabled' or '';
+                                    alt python:canRate and 'I like this product' or 
+                                        'Please log in to rate this product'"/>
+        </span>
+        <span 
+            tal:attributes="class   python:'thumbs-down' + (myVote==-1 and ' selected' or '')">
+            <input type="submit" name="form.hatedit" value="Ugh" 
+                class="allowMultiSubmit dislike-button"
+                 tal:attributes="id  string:${context/id}_submit_like;
+                                     disabled python:not canRate and 'disabled' or '';"/>
+        </span>
+    </form>
+    <div class="like-summary">
+        <span class="total-thumbs-up">
+            <span class="tally-total" tal:content="stats/thumbsup"/> likes,
+        </span>
+        <span class="total-thumbs-down">
+            <span class="tally-total" tal:content="stats/thumbsdown"/> dislikes
+        </span>
+
+    </div>
+    <div class="discreet login-to-rate" tal:condition="not:canRate">
+        <a href="login_form" class="link-overlay">Log in</a> to rate.
+    </div>
+</div>
+
+</html>

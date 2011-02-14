@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:five="http://namespaces.zope.org/five"
+    >
+        
+    <browser:resourceDirectory
+      name="cioppino.twothumbs.stylesheets"
+      directory="stylesheets"
+      />
+     	
+     	
+    <browser:resourceDirectory
+      name="cioppino.twothumbs.javascripts"
+      directory="javascripts"
+      />
+
+    <browser:resourceDirectory
+       name="cioppino.twothumbs.images"
+       directory="images"
+       />
+    
+    <browser:page
+      for="*"
+      name="you-know-you-like-it"
+      permission="zope2.View"
+      class=".like.LikeThisShizzleView"
+      />
+    
+    <browser:page
+      for="*"
+      name="rate-if-you-dare"
+      permission="zope2.View"
+      class=".like.LikeWidgetView"
+      />
+
+    
+</configure>

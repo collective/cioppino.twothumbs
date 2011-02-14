@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object>
+ <order manager="plone.belowcontenttitle" skinname="*">
+  <viewlet name="cioppino.twothumbs"/>
+  <viewlet name="plone.belowcontenttitle.documentbyline"/>
+ </order>
+</object>

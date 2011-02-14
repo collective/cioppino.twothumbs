@@ -1,0 +1,48 @@
+.thumb-rating{
+    float: right;
+}
+
+.total-thumbs-up .tally-total{
+    color: green;
+}
+
+
+.total-thumbs-down .tally-total{
+    color: red;
+}
+
+
+input.like-button, input.dislike-button{
+    padding: 10px 5px;
+    background-color:inherit;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+form input.like-button{
+    padding-left: 30px;
+    background-image: url(++resource++cioppino.twothumbs.images/thumbs-up-off.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+form input.dislike-button{
+    background-image: url(++resource++cioppino.twothumbs.images/thumbs-down-off.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-indent: -3000px; 
+    white-space: nowrap; 
+    width: 35px;
+}
+
+form.enabled input.like-button:hover, form.enabled .selected input.like-button{
+    background-image: url(++resource++cioppino.twothumbs.images/thumbs-up-on.png);
+}
+
+form.enabled input.dislike-button:hover, form.enabled .selected input.dislike-button{
+    background-image: url(++resource++cioppino.twothumbs.images/thumbs-down-on.png);
+}
+
+.login-to-rate{
+    text-align: center;
+}
