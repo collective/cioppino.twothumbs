@@ -1,6 +1,8 @@
 Changelog
 =========
 
-.1 (unreleased)
-------------------
+.1
+/usr/local/lib/python2.6/distutils/dist.py:266:UserWarning:Unknowndistributionoption:'paster_plugins'
+warnings.warn (2011-02-14)
+-----------------------------------------------------------------------------------------------------------------------------------
 - Initial release [eleddy on code, spanktar on graphics]

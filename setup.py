@@ -1,7 +1,9 @@
 from setuptools import setup, find_packages
 import os
 
-version = '.1'
+version = '.1
+/usr/local/lib/python2.6/distutils/dist.py:266:UserWarning:Unknowndistributionoption:'paster_plugins'
+warnings.warn'
 
 setup(name='cioppino.twothumbs',
       version=version,
@@ -17,7 +19,7 @@ setup(name='cioppino.twothumbs',
       keywords='',
       author='eleddy',
       author_email='elizabeth.leddy@gmail.com',
-      url='http://svn.plone.org/svn/collective/',
+      url='https://github.com/eleddy/cioppino.twothumbs',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cioppino'],
