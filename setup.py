@@ -1,9 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '.1
-/usr/local/lib/python2.6/distutils/dist.py:266:UserWarning:Unknowndistributionoption:'paster_plugins'
-warnings.warn'
+version = '1'
 
 setup(name='cioppino.twothumbs',
       version=version,
