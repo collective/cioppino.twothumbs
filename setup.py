@@ -34,5 +34,5 @@ setup(name='cioppino.twothumbs',
       target = plone
       """,
       setup_requires=[],
-      paster_plugins=[],
+
       )
