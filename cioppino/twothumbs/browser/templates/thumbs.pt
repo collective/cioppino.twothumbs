@@ -35,10 +35,10 @@
     </form>
     <div class="like-summary">
         <span class="total-thumbs-up">
-            <span class="tally-total" tal:content="stats/thumbsup"/> likes,
+            <span class="tally-total" tal:content="stats/ups"/> likes,
         </span>
         <span class="total-thumbs-down">
-            <span class="tally-total" tal:content="stats/thumbsdown"/> dislikes
+            <span class="tally-total" tal:content="stats/downs"/> dislikes
         </span>
 
     </div>

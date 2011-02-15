@@ -7,11 +7,11 @@ from Products.Five.browser import BrowserView
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from zope.annotation.interfaces import IAnnotations
-from cioppino.twothumbs.thumbconf import yays, nays
 
 
 class ThumbsViewlet(BrowserView):
     """
+    Render the thumbs view, but using the viewlet arch
     """
     implements(IViewlet)
     render = ViewPageTemplateFile('templates/thumbs_viewlet.pt')
