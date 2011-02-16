@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.01 (2011-02-15)
+--------------
+- switch to absolute patch for form actions since it breaks when 
+  under the influence of rewriting [eleddy]
+
+
 1 (2011-02-14)
 --------------
 - Initial release [eleddy on code, spanktar on graphics]
