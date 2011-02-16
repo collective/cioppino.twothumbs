@@ -15,7 +15,7 @@
                  class="thumb-rating">
     <form action="you-know-you-like-it" method="post"
         tal:attributes="class python:canRate and 'enabled' or 'disabled';
-                        action  string:${context/absolute_url_path}/you-know-you-like-it;">
+                        action  string:${context/absolute_url}/you-know-you-like-it;">
         <span
             tal:attributes="class   python:'thumbs-up' + (myVote==1 and ' selected' or '')">
             <input type="submit" name="form.lovinit" value="Like" 
