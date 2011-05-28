@@ -6,11 +6,12 @@
     i18n_domain="cioppino.twothumbs">
 
   <five:registerPackage package="." initialize=".initialize" />
+  <i18n:registerTranslations directory="locales" />
   <include package=".browser" />
   <include package=".viewlets" />
-  
+
   <adapter name="positive_ratings" factory=".indexers.positive_ratings" />
-  
+
   <genericsetup:registerProfile
       name="default"
       title="cioppino.twothumbs"
@@ -18,5 +19,5 @@
       description="Installs the cioppino.twothumbs package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  
+
 </configure>
