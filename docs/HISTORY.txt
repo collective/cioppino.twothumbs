@@ -1,6 +1,11 @@
 Changelog
 =========
 
+Unreleased (2011-05-27)
+-----------------------
+- Initial i18n and Spanish translation [hvelarde]
+
+
 1.1 (2011-02-15)
 ----------------
 - switch to absolute patch for form actions since it breaks when 

@@ -1,5 +1,6 @@
 from Products.Five.browser import BrowserView
 from zope.component import getMultiAdapter
+from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 import json
@@ -45,9 +46,8 @@ class LikeThisShizzleView(BrowserView):
     elif form.get('form.hatedit', False):
         rate.hateIt(self.context)
     else:
-        return "We don't like ambiguity around here. Check yo self before you wreck yo self."
+        return _(u"We don't like ambiguity around here. Check yo self before you wreck yo self.")
     
     tally = rate.getTally(self.context)
     RESPONSE.setHeader('Content-Type', 'application/javascript')       
     return json.dumps(tally)
-    

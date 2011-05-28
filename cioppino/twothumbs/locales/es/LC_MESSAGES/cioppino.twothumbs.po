@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2011-05-28 01:08+0000\n"
+"PO-Revision-Date: 2011-05-27 18:38-0500\n"
+"Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Generated-By: zope/app/locales/extract.py\n"
+"Language: es\n"
+
+#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:43
+msgid "${dislikes} dislikes"
+msgstr "${dislikes} no le gusta"
+
+#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:39
+msgid "${likes} likes,"
+msgstr "${likes} le gusta,"
+
+#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:50
+msgid "${login} to rate."
+msgstr "${login} para calificar."
+
+#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:21
+msgid "Like"
+msgstr "Me gusta"
+
+#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:51
+msgid "Log in"
+msgstr "Entre"
+
+#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:49
+msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr "No nos gusta la ambigüedad por aquí. Revísate antes de que naufragues."
+
