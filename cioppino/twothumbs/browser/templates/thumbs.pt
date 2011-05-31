@@ -23,8 +23,7 @@
                 i18n:attributes="value"
                 tal:attributes="id  string:${context/id}_submit_like;
                                     disabled python:not canRate and 'disabled' or '';
-                                    alt python:canRate and 'I like this product' or
-                                        'Please log in to rate this product'"/>
+                                    alt  view/getTwoThumbsAlt"/>
         </span>
         <span
             tal:attributes="class   python:'thumbs-down' + (myVote==-1 and ' selected' or '')">
