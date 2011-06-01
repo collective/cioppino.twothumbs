@@ -20,4 +20,7 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+    <class class="Products.ATContentTypes.content.newsitem.ATNewsItem">
+       <implements interface="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
+    </class>
 </configure>
