@@ -5,8 +5,8 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:five="http://namespaces.zope.org/five"
     >
-        
-    <browser:viewlet 
+
+    <browser:viewlet
 		name="cioppino.twothumbs"
 	 	for="..interfaces.ILoveThumbsDontYou"
 	 	manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
