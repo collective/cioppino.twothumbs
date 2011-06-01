@@ -37,8 +37,8 @@ class LikeWidgetView(BrowserView):
     
   def getTwoThumbsAlt(self):  
     if self.canRate():
-        return _(u'I like this product')
-    return _(u'Please log in to rate this product')
+        return _(u'I like this')
+    return _(u'Please log in to rate this')
                 
         
 class LikeThisShizzleView(BrowserView): 
