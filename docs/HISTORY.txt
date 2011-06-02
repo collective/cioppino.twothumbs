@@ -1,8 +1,9 @@
+
 Changelog
 =========
 
-Unreleased (2011-05-27)
------------------------
+1.2 (2011-05-27)
+----------------
 - Initial i18n and Spanish translation [hvelarde]
 
 
