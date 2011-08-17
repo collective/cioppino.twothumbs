@@ -36,16 +36,19 @@ class LikeWidgetView(BrowserView):
 
         return rate.getMyVote(self.context)
 
-    def getTwoThumbsAlt(self):
-        if self.canRate():
-            return _(u'I like this')
-        return _(u'Please log in to rate this')
-
 
 class LikeThisShizzleView(BrowserView):
     """ Update the like/unlike status of a product via AJAX """
 
     def __call__(self, REQUEST, RESPONSE):
+
+        # First check if the user is allowed to rate
+        portal_state = getMultiAdapter((self.context, self.request),
+                                       name='plone_portal_state')
+        if portal_state.anonymous():
+            return RESPONSE.redirect('%s/login?came_from=%s' % (portal_state.portal_url(), REQUEST['HTTP_REFERER']))
+
+
         form = self.request.form
         if form.get('form.lovinit', False):
             rate.loveIt(self.context)
@@ -54,6 +57,11 @@ class LikeThisShizzleView(BrowserView):
         else:
             return _(u"We don't like ambiguity around here. Check yo self before you wreck yo self.")
 
-        tally = rate.getTally(self.context)
-        RESPONSE.setHeader('Content-Type', 'application/javascript')
-        return json.dumps(tally)
+        if not form.get('ajax', False):
+            return RESPONSE.redirect(REQUEST['HTTP_REFERER'])
+        else:
+            tally = rate.getTally(self.context)
+            RESPONSE.setHeader('Content-Type', 'application/json; charset=utf-8')
+            response_json = json.dumps(tally)
+            RESPONSE.setHeader('content-length', len(response_json))
+            return response_json

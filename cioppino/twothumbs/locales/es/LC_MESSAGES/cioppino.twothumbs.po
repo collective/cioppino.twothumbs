@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2011-06-01 00:45+0000\n"
+"POT-Creation-Date: 2011-08-17 03:45+0000\n"
 "PO-Revision-Date: 2011-05-27 18:38-0500\n"
 "Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -16,35 +16,39 @@ msgstr ""
 "Generated-By: zope/app/locales/extract.py\n"
 "Language: es\n"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:42
+#: ./browser/templates/thumbs.pt:40
 msgid "${dislikes} dislikes"
 msgstr "${dislikes} no le gusta"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:38
+#: ./browser/templates/thumbs.pt:36
 msgid "${likes} likes,"
 msgstr "${likes} le gusta,"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:49
+#: ./browser/templates/login_to_rate.pt:14
 msgid "${login} to rate."
 msgstr "${login} para calificar."
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:40
-msgid "I like this"
-msgstr "Me gusta esto"
+#: ./browser/templates/thumbs.pt:28
+msgid "I don't like this (click again to undo)"
+msgstr "No me gusta (otro click para deshacer)"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:21
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr "Me gusta (otro click para deshacer)"
+
+#: ./browser/templates/thumbs.pt:21
 msgid "Like"
 msgstr "Me gusta"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:50
+#: ./browser/templates/login_to_rate.pt:15
 msgid "Log in"
 msgstr "Entre"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:41
-msgid "Please log in to rate this"
-msgstr "Por favor entre para calificar esto"
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
+msgstr "Mmhh..."
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:54
+#: ./browser/like.py:58
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
 msgstr "No nos gusta la ambigüedad por aquí. Revísate antes de que naufragues."
 

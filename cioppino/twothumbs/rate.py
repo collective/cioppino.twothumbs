@@ -41,7 +41,10 @@ def loveIt(context, userid=None):
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
 
-    annotations[yays][userid] = 1
+    if userid in annotations[yays]:
+        annotations[yays].pop(userid)
+    else:
+        annotations[yays][userid] = 1
     context.reindexObject(idxs=['positive_ratings'])
 
 
@@ -59,7 +62,10 @@ def hateIt(context, userid=None):
     if userid in annotations[yays]:
         annotations[yays].pop(userid)
 
-    annotations[nays][userid] = 1
+    if userid in annotations[nays]:
+        annotations[nays].pop(userid)
+    else:
+        annotations[nays][userid] = 1
     context.reindexObject(idxs=['positive_ratings'])
 
 
@@ -70,7 +76,8 @@ def getTally(context):
     annotations = IAnnotations(context)
     return {
             'ups': len(annotations[yays]),
-            'downs': len(annotations[nays])
+            'downs': len(annotations[nays]),
+            'mine': getMyVote(context)
             }
 
 

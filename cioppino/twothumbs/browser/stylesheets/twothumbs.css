@@ -15,32 +15,30 @@
 input.like-button, input.dislike-button{
     padding: 10px 5px;
     background-color:inherit;
+	background-image: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png);
+    background-repeat: no-repeat;
     border: 1px solid #eee;
     cursor: pointer;
 }
 
 form input.like-button{
     padding-left: 30px;
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-up-off.png);
-    background-repeat: no-repeat;
-    background-position: left center;
+    background-position: -26px -27px;
 }
 
 form input.dislike-button{
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-down-off.png);
-    background-repeat: no-repeat;
-    background-position: left center;
+    background-position: 0 -23px;
     text-indent: -3000px; 
     white-space: nowrap; 
     width: 35px;
 }
 
-form.enabled input.like-button:hover, form.enabled .selected input.like-button{
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-up-on.png);
+form input.like-button:hover, form .selected input.like-button{
+    background-position: -26px 5px;
 }
 
-form.enabled input.dislike-button:hover, form.enabled .selected input.dislike-button{
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-down-on.png);
+form input.dislike-button:hover, form .selected input.dislike-button{
+    background-position: 0 10px;
 }
 
 .login-to-rate{
