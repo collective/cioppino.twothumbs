@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-08-17 03:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./browser/templates/thumbs.pt:40
+msgid "${dislikes} dislikes"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:36
+msgid "${likes} likes,"
+msgstr ""
+
+#: ./browser/templates/login_to_rate.pt:14
+msgid "${login} to rate."
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:28
+msgid "I don't like this (click again to undo)"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:21
+msgid "Like"
+msgstr ""
+
+#: ./browser/templates/login_to_rate.pt:15
+msgid "Log in"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
+msgstr ""
+
+#: ./browser/like.py:58
+msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr ""
+
