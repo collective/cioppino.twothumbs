@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2011-08-17 03:45+0000\n"
+"POT-Creation-Date: 2011-08-17 13:11+0000\n"
 "PO-Revision-Date: 2011-05-27 18:38-0500\n"
 "Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -29,7 +29,7 @@ msgid "${login} to rate."
 msgstr "${login} para calificar."
 
 #: ./browser/templates/thumbs.pt:28
-msgid "I don't like this (click again to undo)"
+msgid "I dislike this (click again to undo)"
 msgstr "No me gusta (otro click para deshacer)"
 
 #: ./browser/templates/thumbs.pt:21

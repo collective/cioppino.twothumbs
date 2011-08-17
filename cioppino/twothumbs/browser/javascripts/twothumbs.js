@@ -2,7 +2,8 @@ jQuery(function(jq){
 
     jq('#content').delegate(".thumb-rating form input", "click", (function(event){
         event.preventDefault();
-        var form = jq(this).closest('form');
+        var me = jq(this);
+        var form = me.closest('form');
         if(form.hasClass('disabled')) {
                 var container = form.closest('.thumb-rating');
                 var login = container.find('.login-to-rate');
@@ -15,7 +16,8 @@ jQuery(function(jq){
                 }
                 return;
         }
-        var action = jq(this).attr('name');
+        me.blur();
+        var action = me.attr('name');
         var summary = form.siblings('.like-summary');
         var upResults = summary.find('.total-thumbs-up .tally-total');
         var downResults = summary.find('.total-thumbs-down .tally-total');

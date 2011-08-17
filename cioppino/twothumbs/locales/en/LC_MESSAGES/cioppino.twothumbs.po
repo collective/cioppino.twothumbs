@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-17 03:45+0000\n"
+"POT-Creation-Date: 2011-08-17 13:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "${login} to rate."
 msgstr ""
 
 #: ./browser/templates/thumbs.pt:28
-msgid "I don't like this (click again to undo)"
+msgid "I dislike this (click again to undo)"
 msgstr ""
 
 #: ./browser/templates/thumbs.pt:21

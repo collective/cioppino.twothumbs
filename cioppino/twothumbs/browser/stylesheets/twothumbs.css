@@ -33,12 +33,20 @@ form input.dislike-button{
     width: 35px;
 }
 
-form input.like-button:hover, form .selected input.like-button{
+form .selected input.like-button{
     background-position: -26px 5px;
 }
 
-form input.dislike-button:hover, form .selected input.dislike-button{
+form .selected input.dislike-button{
     background-position: 0 10px;
+}
+
+form input.like-button:hover {
+    border-color: #1d9c00;
+}
+
+form input.dislike-button:hover {
+    border-color: #e62200;
 }
 
 .login-to-rate{

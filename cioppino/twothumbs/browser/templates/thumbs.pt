@@ -26,7 +26,7 @@
         <span
             tal:attributes="class   python:'thumbs-down' + (myVote==-1 and ' selected' or '')">
             <input type="submit" name="form.hatedit" value="Ugh"
-                class="allowMultiSubmit dislike-button" title="I don't like this (click again to undo)"
+                class="allowMultiSubmit dislike-button" title="I dislike this (click again to undo)"
                 i18n:attributes="value; title"
                 tal:attributes="id  string:${context/id}_submit_like;"/>
         </span>
