@@ -1,5 +1,6 @@
 .thumb-rating{
     float: right;
+	position: relative;
 }
 
 .total-thumbs-up .tally-total{
@@ -23,22 +24,22 @@ input.like-button, input.dislike-button{
 
 form input.like-button{
     padding-left: 30px;
-    background-position: -26px -27px;
+    background-position: -39px -27px;
 }
 
 form input.dislike-button{
-    background-position: 0 -23px;
+    background-position: -13px -23px;
     text-indent: -3000px; 
     white-space: nowrap; 
     width: 35px;
 }
 
 form .selected input.like-button{
-    background-position: -26px 5px;
+    background-position: -39px 5px;
 }
 
 form .selected input.dislike-button{
-    background-position: 0 10px;
+    background-position: -13px 10px;
 }
 
 form input.like-button:hover {
@@ -50,5 +51,27 @@ form input.dislike-button:hover {
 }
 
 .login-to-rate{
-    text-align: center;
+    position: absolute;
+	z-index: 1;
+	width: 200%;
+	margin-left: -50%;
+}
+
+#content .login-to-rate dl.portalMessage a.close-link {
+	border-bottom: 0;
+}
+
+.login-to-rate .close-link {
+	float: right;
+	width: 13px;
+	height: 13px;
+	background: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png) no-repeat 0 0;
+}
+
+.login-to-rate .close-link:hover {
+	background-position: 0 -13px;
+}
+
+.login-to-rate .close-link:active {
+	background-position: 0 -26px;
 }

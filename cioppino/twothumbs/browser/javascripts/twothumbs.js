@@ -5,13 +5,17 @@ jQuery(function(jq){
         var me = jq(this);
         var form = me.closest('form');
         if(form.hasClass('disabled')) {
+                // Can't rate, show info box
                 var container = form.closest('.thumb-rating');
                 var login = container.find('.login-to-rate');
-                if(login.length>0) {
-                    login.stop().hide().slideDown();
-                } else {
-                    container.append('<div>').children().last().hide().load('./login-to-rate div', function() {
-                            $(this).slideDown();
+                if(login.length===0) {
+                    container.append('<div>').children().last().hide().addClass('login-to-rate').load('./login-to-rate dl', function() {
+			    var me = $(this);
+                            me.slideDown().find('.close-link').click(function(event) {
+                                event.preventDefault(); 
+				$(this).closest('.login-to-rate').slideUp(function() {$(this).remove();});
+			    });
+ 
                     });
                 }
                 return;
