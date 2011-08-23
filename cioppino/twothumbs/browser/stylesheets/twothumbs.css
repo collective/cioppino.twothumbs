@@ -50,28 +50,30 @@ form input.dislike-button:hover {
     border-color: #e62200;
 }
 
-.login-to-rate{
+.twothumbs-feedback{
     position: absolute;
 	z-index: 1;
 	width: 200%;
-	margin-left: -50%;
-}
+	margin-left: -52%;
+	padding: 4%;
+	font-size: 90%;
+	border: 1px solid #555;
+	background-color: #ddd;
+	text-align: center;
 
-#content .login-to-rate dl.portalMessage a.close-link {
+}
+#content .twothumbs-feedback a.close-link:link {
 	border-bottom: 0;
-}
-
-.login-to-rate .close-link {
 	float: right;
 	width: 13px;
 	height: 13px;
 	background: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png) no-repeat 0 0;
 }
 
-.login-to-rate .close-link:hover {
+#content .twothumbs-feedback a.close-link:link:hover {
 	background-position: 0 -13px;
 }
 
-.login-to-rate .close-link:active {
+#content .twothumbs-feedback a.close-link:link:active {
 	background-position: 0 -26px;
 }

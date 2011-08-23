@@ -50,10 +50,11 @@ class LikeThisShizzleView(BrowserView):
 
 
         form = self.request.form
+        action = None
         if form.get('form.lovinit', False):
-            rate.loveIt(self.context)
+            action = rate.loveIt(self.context)
         elif form.get('form.hatedit', False):
-            rate.hateIt(self.context)
+            action = rate.hateIt(self.context)
         else:
             return _(u"We don't like ambiguity around here. Check yo self before you wreck yo self.")
 
@@ -61,6 +62,14 @@ class LikeThisShizzleView(BrowserView):
             return RESPONSE.redirect(REQUEST['HTTP_REFERER'])
         else:
             tally = rate.getTally(self.context)
+            tally['action'] = action
+            if(action=='like'):
+                tally['msg'] = _(u"You liked this. Thanks for the feedback!")
+            elif(action=='dislike'):
+                tally['msg'] = _(u"You dislike this. Thanks for the feedback!")
+            elif(action=='undo'):
+                tally['msg'] = _(u"Your vote has been removed.")
+            
             RESPONSE.setHeader('Content-Type', 'application/json; charset=utf-8')
             response_json = json.dumps(tally)
             RESPONSE.setHeader('content-length', len(response_json))
