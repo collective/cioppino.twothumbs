@@ -58,7 +58,7 @@ jQuery(function(jq){
 					});
 					setTimeout((function() {
 						jq('#' + id).slideUp();
-					}), 2000);
+					}), 8000);
 				}, 'json');
 			}
 		}
