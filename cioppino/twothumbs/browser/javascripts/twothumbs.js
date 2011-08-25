@@ -51,7 +51,7 @@ jQuery(function(jq){
 					}
 					var id = 'ttf-' + (new Date()).getTime();
 					jq('<div>').attr('id', id).addClass('twothumbs-feedback').html(data.msg).
-					prepend('<a class="close-link" href="#">&nbsp;</a>').
+					prepend('<a class="close-link" title="' + data.close + '" href="#">&nbsp;</a>').
 					appendTo(container).hide().slideDown().find('.close-link').click(function(event) {
 						event.preventDefault(); 
 						$(this).closest('.twothumbs-feedback').slideUp();

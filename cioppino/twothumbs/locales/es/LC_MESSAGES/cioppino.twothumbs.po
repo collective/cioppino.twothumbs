@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2011-08-17 13:11+0000\n"
-"PO-Revision-Date: 2011-05-27 18:38-0500\n"
-"Last-Translator: Héctor Velarde <hector.velarde@gmail.com>\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"PO-Revision-Date: 2011-08-25 08:35-0300\n"
+"Last-Translator: Marcos F. Romero <marcos.romero@inter-cultura.com>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,9 +24,13 @@ msgstr "${dislikes} no le gusta"
 msgid "${likes} likes,"
 msgstr "${likes} le gusta,"
 
-#: ./browser/templates/login_to_rate.pt:14
-msgid "${login} to rate."
-msgstr "${login} para calificar."
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
+msgstr "${login} para calificar ${close-link}"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
+msgstr "Cerrar"
 
 #: ./browser/templates/thumbs.pt:28
 msgid "I dislike this (click again to undo)"
@@ -42,13 +46,25 @@ msgstr "Me gusta"
 
 #: ./browser/templates/login_to_rate.pt:15
 msgid "Log in"
-msgstr "Entre"
+msgstr "Ingresá"
 
 #: ./browser/templates/thumbs.pt:28
 msgid "Ugh"
-msgstr "Mmhh..."
+msgstr "No me gusta"
 
-#: ./browser/like.py:58
+#: ./browser/like.py:60
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
 msgstr "No nos gusta la ambigüedad por aquí. Revísate antes de que naufragues."
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr "No te gustó. Gracias por tu calificación."
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr "Te gustó. Gracias por tu calificación."
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
+msgstr "Borramos tu calificación."
 

@@ -1,7 +1,9 @@
 import json
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.component import getMultiAdapter
+from zope.component import getMultiAdapter, queryUtility
+from zope.i18n.interfaces import ITranslationDomain
+from Products.CMFCore.utils import getToolByName
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 
@@ -63,12 +65,27 @@ class LikeThisShizzleView(BrowserView):
         else:
             tally = rate.getTally(self.context)
             tally['action'] = action
+
+            # Create handy translate function
+            td = queryUtility(ITranslationDomain, name='cioppino.twothumbs')
+            if td:
+                tx = td.translate
+            else:
+                # Workaround for non-registered translation domain to prevent breaking
+                def tx(msgid, target_language=None):
+                    return msgid
+
+            ltool = getToolByName(self, 'portal_languages')
+            target_language = ltool.getPreferredLanguage()
+
             if(action=='like'):
-                tally['msg'] = _(u"You liked this. Thanks for the feedback!")
+                tally['msg'] = tx(_(u"You liked this. Thanks for the feedback!"), target_language=target_language)
             elif(action=='dislike'):
-                tally['msg'] = _(u"You dislike this. Thanks for the feedback!")
+                tally['msg'] = tx(_(u"You dislike this. Thanks for the feedback!"), target_language=target_language)
             elif(action=='undo'):
-                tally['msg'] = _(u"Your vote has been removed.")
+                tally['msg'] = tx(_(u"Your vote has been removed."), target_language=target_language)
+
+            tally['close'] = tx(_(u"Close"), target_language=target_language)
             
             RESPONSE.setHeader('Content-Type', 'application/json; charset=utf-8')
             response_json = json.dumps(tally)

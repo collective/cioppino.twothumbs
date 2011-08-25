@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-17 13:11+0000\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,8 +22,12 @@ msgstr ""
 msgid "${likes} likes,"
 msgstr ""
 
-#: ./browser/templates/login_to_rate.pt:14
-msgid "${login} to rate."
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
+msgstr ""
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
 msgstr ""
 
 #: ./browser/templates/thumbs.pt:28
@@ -46,7 +50,19 @@ msgstr ""
 msgid "Ugh"
 msgstr ""
 
-#: ./browser/like.py:58
+#: ./browser/like.py:60
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr ""
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr ""
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr ""
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
 msgstr ""
 
