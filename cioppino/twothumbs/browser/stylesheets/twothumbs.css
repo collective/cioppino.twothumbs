@@ -42,14 +42,6 @@ form .selected input.dislike-button{
     background-position: -13px 10px;
 }
 
-form input.like-button:hover {
-    border-color: #1d9c00;
-}
-
-form input.dislike-button:hover {
-    border-color: #e62200;
-}
-
 .twothumbs-feedback{
     position: absolute;
 	z-index: 1;
