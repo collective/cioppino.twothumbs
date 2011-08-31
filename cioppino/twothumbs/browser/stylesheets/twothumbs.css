@@ -1,5 +1,6 @@
 .thumb-rating{
     float: right;
+	position: relative;
 }
 
 .total-thumbs-up .tally-total{
@@ -15,34 +16,56 @@
 input.like-button, input.dislike-button{
     padding: 10px 5px;
     background-color:inherit;
+	background-image: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png);
+    background-repeat: no-repeat;
     border: 1px solid #eee;
     cursor: pointer;
 }
 
 form input.like-button{
     padding-left: 30px;
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-up-off.png);
-    background-repeat: no-repeat;
-    background-position: left center;
+    background-position: -39px -27px;
 }
 
 form input.dislike-button{
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-down-off.png);
-    background-repeat: no-repeat;
-    background-position: left center;
+    background-position: -13px -23px;
     text-indent: -3000px; 
     white-space: nowrap; 
     width: 35px;
 }
 
-form.enabled input.like-button:hover, form.enabled .selected input.like-button{
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-up-on.png);
+form .selected input.like-button{
+    background-position: -39px 5px;
 }
 
-form.enabled input.dislike-button:hover, form.enabled .selected input.dislike-button{
-    background-image: url(++resource++cioppino.twothumbs.images/thumbs-down-on.png);
+form .selected input.dislike-button{
+    background-position: -13px 10px;
 }
 
-.login-to-rate{
-    text-align: center;
+.twothumbs-feedback{
+    position: absolute;
+	z-index: 1;
+	width: 200%;
+	margin-left: -52%;
+	padding: 4%;
+	font-size: 90%;
+	border: 1px solid #555;
+	background-color: #ddd;
+	text-align: center;
+
+}
+#content .twothumbs-feedback a.close-link:link {
+	border-bottom: 0;
+	float: right;
+	width: 13px;
+	height: 13px;
+	background: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png) no-repeat 0 0;
+}
+
+#content .twothumbs-feedback a.close-link:link:hover {
+	background-position: 0 -13px;
+}
+
+#content .twothumbs-feedback a.close-link:link:active {
+	background-position: 0 -26px;
 }

@@ -19,18 +19,16 @@
         <span
             tal:attributes="class   python:'thumbs-up' + (myVote==1 and ' selected' or '')">
             <input type="submit" name="form.lovinit" value="Like"
-                class="allowMultiSubmit like-button"
-                i18n:attributes="value"
-                tal:attributes="id  string:${context/id}_submit_like;
-                                    disabled python:not canRate and 'disabled' or '';
-                                    alt  view/getTwoThumbsAlt"/>
+                class="allowMultiSubmit like-button" title="I like this (click again to undo)"
+                i18n:attributes="value; title"
+                tal:attributes="id  string:${context/id}_submit_like;" />
         </span>
         <span
             tal:attributes="class   python:'thumbs-down' + (myVote==-1 and ' selected' or '')">
             <input type="submit" name="form.hatedit" value="Ugh"
-                class="allowMultiSubmit dislike-button"
-                 tal:attributes="id  string:${context/id}_submit_like;
-                                     disabled python:not canRate and 'disabled' or '';"/>
+                class="allowMultiSubmit dislike-button" title="I dislike this (click again to undo)"
+                i18n:attributes="value; title"
+                tal:attributes="id  string:${context/id}_submit_like;"/>
         </span>
     </form>
     <div class="like-summary">
@@ -43,13 +41,6 @@
                   i18n:name="dislikes" /> dislikes
         </span>
 
-    </div>
-    <div class="discreet login-to-rate" tal:condition="not:canRate"
-         i18n:translate="">
-        <span i18n:name="login">
-            <a href="login_form" class="link-overlay"
-               i18n:translate="">Log in</a>
-        </span> to rate.
     </div>
 </div>
 

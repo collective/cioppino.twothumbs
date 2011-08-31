@@ -36,5 +36,12 @@
       class=".like.LikeWidgetView"
       />
 
+    <browser:page
+      for="*"
+      name="login-to-rate"
+      permission="zope2.View"
+      template="templates/login_to_rate.pt"
+      />
+
     
 </configure>

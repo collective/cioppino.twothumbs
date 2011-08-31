@@ -1,70 +1,68 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2011-08-25 11:53+0000\n"
-"PO-Revision-Date: 2011-08-25 08:35-0300\n"
-"Last-Translator: Marcos F. Romero <marcos.romero@inter-cultura.com>\n"
-"Language-Team: Spanish\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
-"Generated-By: zope/app/locales/extract.py\n"
-"Language: es\n"
 
 #: ./browser/templates/thumbs.pt:40
 msgid "${dislikes} dislikes"
-msgstr "${dislikes} no le gusta"
+msgstr ""
 
 #: ./browser/templates/thumbs.pt:36
 msgid "${likes} likes,"
-msgstr "${likes} le gusta,"
+msgstr ""
 
 #: ./browser/templates/login_to_rate.pt:18
 msgid "${login} to rate ${close-link}"
-msgstr "${login} para calificar ${close-link}"
+msgstr ""
 
 #: ./browser/templates/login_to_rate.pt:18
 msgid "Close"
-msgstr "Cerrar"
+msgstr ""
 
 #: ./browser/templates/thumbs.pt:28
 msgid "I dislike this (click again to undo)"
-msgstr "No me gusta (otro click para deshacer)"
+msgstr ""
 
 #: ./browser/templates/thumbs.pt:21
 msgid "I like this (click again to undo)"
-msgstr "Me gusta (otro click para deshacer)"
+msgstr ""
 
 #: ./browser/templates/thumbs.pt:21
 msgid "Like"
-msgstr "Me gusta"
+msgstr ""
 
 #: ./browser/templates/login_to_rate.pt:15
 msgid "Log in"
-msgstr "Ingresá"
+msgstr ""
 
 #: ./browser/templates/thumbs.pt:28
 msgid "Ugh"
-msgstr "No me gusta"
+msgstr ""
 
 #: ./browser/like.py:60
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
-msgstr "No nos gusta la ambigüedad por aquí. Revísate antes de que naufragues."
+msgstr ""
 
 #: ./browser/like.py:79
 msgid "You dislike this. Thanks for the feedback!"
-msgstr "No te gustó. Gracias por tu calificación."
+msgstr ""
 
 #: ./browser/like.py:77
 msgid "You liked this. Thanks for the feedback!"
-msgstr "Te gustó. Gracias por tu calificación."
+msgstr ""
 
 #: ./browser/like.py:81
 msgid "Your vote has been removed."
-msgstr "Borramos tu calificación."
+msgstr ""
 

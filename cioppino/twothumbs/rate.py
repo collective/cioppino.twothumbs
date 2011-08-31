@@ -29,10 +29,12 @@ def setupAnnotations(context):
 def loveIt(context, userid=None):
     """
     Like an item (context). If no user id is passed in, the logged in User
-    will be used. If the user has already commented in one place
-    or the other, remove that vote. Then add the new vote.
+    will be used. If the user has already liked the item, remove the vote.
+    If the user has already disliked the item, remove that vote and add a 
+    new 'like' one.
     """
     annotations = IAnnotations(context)
+    action = None
 
     if not userid:
         mtool = getToolByName(context, 'portal_membership')
@@ -41,8 +43,15 @@ def loveIt(context, userid=None):
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
 
-    annotations[yays][userid] = 1
+    if userid in annotations[yays]:
+        annotations[yays].pop(userid)
+        action = "undo"
+    else:
+        annotations[yays][userid] = 1
+        action = "like"
+
     context.reindexObject(idxs=['positive_ratings'])
+    return action
 
 
 def hateIt(context, userid=None):
@@ -51,6 +60,7 @@ def hateIt(context, userid=None):
     will be used.
     """
     annotations = IAnnotations(context)
+    action = None
 
     if not userid:
         mtool = getToolByName(context, 'portal_membership')
@@ -59,8 +69,15 @@ def hateIt(context, userid=None):
     if userid in annotations[yays]:
         annotations[yays].pop(userid)
 
-    annotations[nays][userid] = 1
+    if userid in annotations[nays]:
+        annotations[nays].pop(userid)
+        action = "undo"
+    else:
+        annotations[nays][userid] = 1
+        action = "dislike"
+
     context.reindexObject(idxs=['positive_ratings'])
+    return action
 
 
 def getTally(context):
@@ -70,7 +87,8 @@ def getTally(context):
     annotations = IAnnotations(context)
     return {
             'ups': len(annotations[yays]),
-            'downs': len(annotations[nays])
+            'downs': len(annotations[nays]),
+            'mine': getMyVote(context)
             }
 
 
