@@ -1,3 +1,4 @@
 *.pyc
 cioppino.twothumbs.egg-info
 dist
+*.mo

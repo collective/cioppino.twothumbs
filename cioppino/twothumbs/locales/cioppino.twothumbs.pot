@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-06-01 00:45+0000\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,55 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: cioppino.twothumbs\n"
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:42
+#: ./browser/templates/thumbs.pt:40
 msgid "${dislikes} dislikes"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:38
+#: ./browser/templates/thumbs.pt:36
 msgid "${likes} likes,"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:49
-msgid "${login} to rate."
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:40
-msgid "I like this"
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:21
+#: ./browser/templates/thumbs.pt:28
+msgid "I dislike this (click again to undo)"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:21
 msgid "Like"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/templates/thumbs.pt:50
+#: ./browser/templates/login_to_rate.pt:15
 msgid "Log in"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:41
-msgid "Please log in to rate this"
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
 msgstr ""
 
-#: cioppino.twothumbs/cioppino/twothumbs/browser/like.py:54
+#: ./browser/like.py:60
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr ""
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr ""
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr ""
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
 msgstr ""
 
