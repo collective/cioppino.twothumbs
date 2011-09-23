@@ -1,7 +1,10 @@
 Changelog
 =========
 
-1.3 (unreleased)
+1.4 (Unreleased)
+----------------
+
+1.3 (2011-09-22)
 ----------------
 - Turn thumbs background images into a sprite [marcosfromero]
 - Improve accessibility: non AJAX/JavaScript support [marcosfromero]
