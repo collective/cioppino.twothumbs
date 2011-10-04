@@ -30,7 +30,7 @@ def loveIt(context, userid=None):
     """
     Like an item (context). If no user id is passed in, the logged in User
     will be used. If the user has already liked the item, remove the vote.
-    If the user has already disliked the item, remove that vote and add a 
+    If the user has already disliked the item, remove that vote and add a
     new 'like' one.
     """
     annotations = IAnnotations(context)
@@ -84,6 +84,7 @@ def getTally(context):
     """
     Return a dictionary of total likes and dislikes
     """
+    setupAnnotations(context)
     annotations = IAnnotations(context)
     return {
             'ups': len(annotations[yays]),
