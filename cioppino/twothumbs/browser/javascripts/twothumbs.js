@@ -1,6 +1,6 @@
 jQuery(function(jq){
 
-	jq('#content').delegate(".thumb-rating form input", "click", (function(event){
+	jq('.thumb-rating form input').live('click', (function(event){
 		event.preventDefault();
 		var me = jq(this);
 		var form = me.closest('form');
@@ -10,10 +10,10 @@ jQuery(function(jq){
 			var login = container.find('.twothumbs-feedback');
 			if(login.length===0) {
 				jq('<div>').addClass('twothumbs-feedback').hide().load('./login-to-rate', function() {
-					var me = $(this);
+					var me = jq(this);
 					me.slideDown().find('.close-link').click(function(event) {
 						event.preventDefault(); 
-						$(this).closest('.twothumbs-feedback').slideUp();
+						jq(this).closest('.twothumbs-feedback').slideUp();
 					});
  
 				}).appendTo(container);
@@ -54,7 +54,7 @@ jQuery(function(jq){
 					prepend('<a class="close-link" title="' + data.close + '" href="#">&nbsp;</a>').
 					appendTo(container).hide().slideDown().find('.close-link').click(function(event) {
 						event.preventDefault(); 
-						$(this).closest('.twothumbs-feedback').slideUp();
+						jq(this).closest('.twothumbs-feedback').slideUp();
 					});
 					setTimeout((function() {
 						jq('#' + id).slideUp();
