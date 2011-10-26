@@ -1,6 +1,6 @@
 jQuery(function(jq){
 
-	jq('.thumb-rating form input').live('click', (function(event){
+	jq('body').delegate('.thumb-rating form input', 'click', function(event) {
 		event.preventDefault();
 		var me = jq(this);
 		var form = me.closest('form');
@@ -62,6 +62,6 @@ jQuery(function(jq){
 				}, 'json');
 			}
 		}
-	}));
+	});
 
 });
