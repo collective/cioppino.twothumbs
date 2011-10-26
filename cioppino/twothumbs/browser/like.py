@@ -1,4 +1,8 @@
-import json
+# fallback to simplejson for pre python2.6
+try:
+    import json
+except:
+    import simplejson as json
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter, queryUtility

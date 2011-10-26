@@ -54,7 +54,7 @@ form .selected input.dislike-button{
 	text-align: center;
 
 }
-#content .twothumbs-feedback a.close-link:link {
+.twothumbs-feedback a.close-link:link {
 	border-bottom: 0;
 	float: right;
 	width: 13px;
@@ -62,10 +62,10 @@ form .selected input.dislike-button{
 	background: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png) no-repeat 0 0;
 }
 
-#content .twothumbs-feedback a.close-link:link:hover {
+.twothumbs-feedback a.close-link:link:hover {
 	background-position: 0 -13px;
 }
 
-#content .twothumbs-feedback a.close-link:link:active {
+.twothumbs-feedback a.close-link:link:active {
 	background-position: 0 -26px;
 }
