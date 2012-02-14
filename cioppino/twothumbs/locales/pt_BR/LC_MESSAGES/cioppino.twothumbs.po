@@ -1,0 +1,71 @@
+# Andre Nogueira <agnogueira@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"PO-Revision-Date: 2012-02-14 16:56-0300\n"
+"Last-Translator: Andre Nogueira <andre@simplesconsultoria.com.br>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Language-Code: pt-br\n"
+"Language-Name: Português do Brasil\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Generated-By: zope/app/locales/extract.py\n"
+"Language: pt-br\n"
+
+#: ./browser/templates/thumbs.pt:40
+msgid "${dislikes} dislikes"
+msgstr "${dislikes} não curtir"
+
+#: ./browser/templates/thumbs.pt:36
+msgid "${likes} likes,"
+msgstr "${likes} curtir,"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
+msgstr "${login} para avaliar ${close-link}"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
+msgstr "Fechar"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "I dislike this (click again to undo)"
+msgstr "Não curti (clique novamente para desfazer)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr "Curti (clique novamente para desfazer)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "Like"
+msgstr "Curtir"
+
+#: ./browser/templates/login_to_rate.pt:15
+msgid "Log in"
+msgstr "Logar"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
+msgstr "Não curti"
+
+#: ./browser/like.py:60
+msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr "Não gostamos de ambiguidades por aqui. Revise antes que naufrague."
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr "Você não curtiu. Obrigado pela participação!"
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr "Você curtiu. Obrigado pela participação!"
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
+msgstr "Sua avaliação foi removida."
+
