@@ -3,6 +3,7 @@ Changelog
 
 1.4 (Unreleased)
 ----------------
+- German translation added. [jensens]
 - Add support for Plone 3 [rochecompaan]
 - Enable use of the twotumbs widget outside the content div [rochecompaan]
 
