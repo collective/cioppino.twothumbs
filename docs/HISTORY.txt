@@ -1,7 +1,12 @@
+=========
 Changelog
 =========
 
-1.4 (Unreleased)
+1.5 (unreleased)
+----------------
+- 
+
+1.4 (2012-05-15)
 ----------------
 - German translation added. [jensens]
 - Add support for Plone 3 [rochecompaan]
