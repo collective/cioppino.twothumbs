@@ -36,13 +36,15 @@ recipe to manage your project, you can do this:
         ...
         cioppino.twothumbs
        
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
+* Optional: Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
 
     [instance]
     recipe = plone.recipe.zope2instance
     ...
     zcml =
         cioppino.twothumbs
+
+Note that this is not required on Plone 4.0 and up.
       
 * Re-run buildout, e.g. with:
 

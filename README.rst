@@ -14,8 +14,14 @@ below the content title, you must follow the viewlet directions below
 before restarting and installing. Otherwise install immediately and then 
 skip to the section on browser views.
 
+Make sure you have installed or "Activated" the product if things aren't
+working as expected.
+
 As a Viewlet
 ------------
+
+Archetypes
+^^^^^^^^^^
 Then, in the configure.zcml 
 in the base of your product you need to tell which content types should 
 display the thumbs. For example, with the PloneSoftwareCenter product, 
@@ -31,12 +37,31 @@ product only. You only need to include the package 1 time but you
 need to add the class block for every content type you would like 
 to show the thumbs.
 
+Dexterity
+^^^^^^^^^
+Cioppino.TwoThumbs is now available as a behavior for dexterity content types. In 
+the dexterity configuration UI, it will be listed under "Behaviors" for any new 
+content type you create after the product has been installed. You may also 
+manually add this behavior to your type by adding the following to 
+../path/to/profiles/default/types/your_type.xml::
+
+    ...
+    <property name="behaviors">
+        <element value="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
+        ...
+    </property>
+    ...
+
+
 As a Browser View
 -----------------
 Additionally, you can generate the widget on any content page in any place
 by just adding a few lines to your template::
     
     <div tal:content="structure here/@@rate-if-you-dare"/>
+
+Note that this ONLY works if the browser view is in context of a content 
+type since it requires access to content object annotations.
 
 
 Migration
