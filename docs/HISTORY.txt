@@ -2,7 +2,7 @@
 Changelog
 =========
 
-1.5 (unreleased)
+1.5 (2012-06-07)
 ----------------
 - Add support for dexterity behaviors [eleddy]
 - Fix confirmation message alignment for default plone sites [eleddy]
