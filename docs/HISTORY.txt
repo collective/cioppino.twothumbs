@@ -10,6 +10,7 @@ Changelog
 1.4 (2012-05-15)
 ----------------
 - German translation added. [jensens]
+- Added Brazilian Portuguese translation. [agnogueira]
 - Add support for Plone 3 [rochecompaan]
 - Enable use of the twotumbs widget outside the content div [rochecompaan]
 
