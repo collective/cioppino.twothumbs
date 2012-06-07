@@ -52,7 +52,7 @@ form .selected input.dislike-button{
 	border: 1px solid #555;
 	background-color: #ddd;
 	text-align: center;
-
+    right: 0; /* dexterity */
 }
 .twothumbs-feedback a.close-link:link {
 	border-bottom: 0;
