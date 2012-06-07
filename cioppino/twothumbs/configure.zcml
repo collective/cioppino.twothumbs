@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="cioppino.twothumbs">
 
@@ -11,6 +12,12 @@
   <include package=".viewlets" />
 
   <adapter name="positive_ratings" factory=".indexers.positive_ratings" />
+
+  <plone:behavior
+    title="Content Ratings (cioppino.twothumbs)"
+    description="Adds the ability to rate content based on facebook-like thumbs."
+    provides="cioppino.twothumbs.interfaces.ILoveThumbsDontYou"
+    />
 
   <genericsetup:registerProfile
       name="default"
