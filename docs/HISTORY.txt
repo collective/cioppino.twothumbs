@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.7 (Unreleased)
+----------------
+- 
+
 1.6 (2012-06-11)
 ----------------
 - Fix requirements for instances where dexterity is not installed [tschorr]
