@@ -25,6 +25,7 @@ setup(name='cioppino.twothumbs',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.behavior',
       ],
       entry_points="""
       # -*- Entry points: -*-

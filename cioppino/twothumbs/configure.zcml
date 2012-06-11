@@ -13,6 +13,8 @@
 
   <adapter name="positive_ratings" factory=".indexers.positive_ratings" />
 
+  <include package="plone.behavior" file="meta.zcml" />
+
   <plone:behavior
     title="Content Ratings (cioppino.twothumbs)"
     description="Adds the ability to rate content based on facebook-like thumbs."
