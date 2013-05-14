@@ -14,15 +14,13 @@ from cioppino.twothumbs import rate
 
 class LikeWidgetView(BrowserView):
     """ Display the like/unlike widget. """
-    render = ViewPageTemplateFile('templates/thumbs.pt')
+    #index is the one managed by both by zcml and python
+    index = ViewPageTemplateFile('templates/thumbs.pt')
 
     def __init__(self, context, request):
         self.context = context
         self.request = request
         self.annotations = rate.setupAnnotations(self.context)
-
-    def __call__(self):
-        return self.render()
 
     def canRate(self):
         portal_state = getMultiAdapter((self.context, self.request),
