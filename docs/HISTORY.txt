@@ -3,7 +3,9 @@ Changelog
 
 1.7 (Unreleased)
 ----------------
-- 
+- Add french translation [toutpt]
+- Make the template being 'index' to be customizable with zcml + browser layer
+  [toutpt]
 
 1.6 (2012-06-11)
 ----------------
