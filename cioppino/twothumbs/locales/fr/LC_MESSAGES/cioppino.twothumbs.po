@@ -1,0 +1,71 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# JeanMichel FRANCOIS <toutpt@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <plone-fr@lists.plone.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: cioppino.twothumbs\n"
+
+#: ./browser/templates/thumbs.pt:40
+msgid "${dislikes} dislikes"
+msgstr "${dislikes} n'aiment pas"
+
+#: ./browser/templates/thumbs.pt:36
+msgid "${likes} likes,"
+msgstr "${likes} aiment,"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
+msgstr "${login} pour noter ${close-link}"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
+msgstr "Fermer"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "I dislike this (click again to undo)"
+msgstr "Je n'aime pas (cliquer de nouveau pour annuler)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr "J'aime (cliquer de nouveau pour annuler)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "Like"
+msgstr "Aimer"
+
+#: ./browser/templates/login_to_rate.pt:15
+msgid "Log in"
+msgstr "Se connecter"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
+msgstr "Pouah"
+
+#: ./browser/like.py:60
+msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr "N'ou n'aimont pas l'ambiguité par ici. Vérifier avant de jeter la pierre."
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr "Vous n'aimez pas. Merci de votre retour !"
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr "Vous aimez. Merci de votre retour !"
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
+msgstr "Votre vote a été supprimé."
+
