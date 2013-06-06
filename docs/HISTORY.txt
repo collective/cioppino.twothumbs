@@ -1,11 +1,16 @@
 Changelog
 =========
 
-1.7 (Unreleased)
+1.8 (Unreleased)
+----------------
+
+
+1.7 (2013-06-04)
 ----------------
 - Add french translation [toutpt]
 - Make the template being 'index' to be customizable with zcml + browser layer
   [toutpt]
+- Add catalan translation [mpampols]
 
 1.6 (2012-06-11)
 ----------------
