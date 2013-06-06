@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"PO-Revision-Date: 2011-08-25 08:35-0300\n"
+"Last-Translator: Marc Pàmpols <mpampols@gmail.com>\n"
+"Language-Team: Catalan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: ca\n"
+"Language-Name: Catalan\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Generated-By: zope/app/locales/extract.py\n"
+"Language: ca\n"
+
+#: ./browser/templates/thumbs.pt:40
+msgid "${dislikes} dislikes"
+msgstr "${dislikes} no els hi agrada"
+
+#: ./browser/templates/thumbs.pt:36
+msgid "${likes} likes,"
+msgstr "${likes} els hi agrada,"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
+msgstr "${login} per a qualificar ${close-link}"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
+msgstr "Tancar"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "I dislike this (click again to undo)"
+msgstr "No m'agrada (torna a clicar per a desfer)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr "M'agrada (torna a clicar per a desfer)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "Like"
+msgstr "M'agrada"
+
+#: ./browser/templates/login_to_rate.pt:15
+msgid "Log in"
+msgstr "Entra"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
+msgstr "No m'agrada"
+
+#: ./browser/like.py:60
+msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr "No ens agrada l'ambigüitat per aquí. Revisi el seu acte abans d'arruïnar-ho."
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr "No t'ha agradat. Gràcies pels comentaris!"
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr "T'ha agradat. Gràcies pels comentaris!"
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
+msgstr "El seu vot ha estat eliminat."
+
