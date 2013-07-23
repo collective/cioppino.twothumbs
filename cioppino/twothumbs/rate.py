@@ -1,6 +1,9 @@
 from zope.annotation.interfaces import IAnnotations
+from zope import event
 from BTrees.OIBTree import OIBTree
 from Products.CMFCore.utils import getToolByName
+
+from .event import LikeEvent, UnlikeEvent, DislikeEvent, UndislikeEvent
 
 
 # The name of the annotation fields, namespaces so
@@ -46,9 +49,11 @@ def loveIt(context, userid=None):
     if userid in annotations[yays]:
         annotations[yays].pop(userid)
         action = "undo"
+        event.notify(UnlikeEvent(context))
     else:
         annotations[yays][userid] = 1
         action = "like"
+        event.notify(LikeEvent(context))
 
     context.reindexObject(idxs=['positive_ratings'])
     return action
@@ -72,9 +77,11 @@ def hateIt(context, userid=None):
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
         action = "undo"
+        event.notify(UndislikeEvent(context))
     else:
         annotations[nays][userid] = 1
         action = "dislike"
+        event.notify(DislikeEvent(context))
 
     context.reindexObject(idxs=['positive_ratings'])
     return action
