@@ -29,4 +29,30 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <!-- Triggers -->
+
+  <interface
+      interface=".event.ILikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object liked"
+      />
+
+  <interface
+      interface=".event.IUnlikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object unliked"
+      />
+
+  <interface
+      interface=".event.IDislikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object disliked"
+      />
+
+  <interface
+      interface=".event.IUndislikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object undisliked"
+      />
+
 </configure>
