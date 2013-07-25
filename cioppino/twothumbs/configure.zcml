@@ -57,22 +57,22 @@
 
   <subscriber
       for=".event.ILikeEvent"
-      handler="triggers_handlers.like"
+      handler=".triggers_handlers.like"
       />
 
   <subscriber
       for=".event.IUnlikeEvent"
-      handler="triggers_handlers.unlike"
+      handler=".triggers_handlers.unlike"
       />
 
   <subscriber
       for=".event.IDislikeEvent"
-      handler="triggers_handlers.dislike"
+      handler=".triggers_handlers.dislike"
       />
 
   <subscriber
       for=".event.IUndislikeEvent"
-      handler="triggers_handlers.undislike"
+      handler=".triggers_handlers.undislike"
       />
 
 </configure>
