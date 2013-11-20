@@ -1,5 +1,4 @@
 from plone.indexer.decorator import indexer
-from zope.annotation.interfaces import IAnnotations
 from interfaces import ILoveThumbsDontYou
 import rate
 

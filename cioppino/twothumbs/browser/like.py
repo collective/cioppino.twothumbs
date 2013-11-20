@@ -52,8 +52,10 @@ class LikeThisShizzleView(BrowserView):
         portal_state = getMultiAdapter((self.context, self.request),
                                        name='plone_portal_state')
         if portal_state.anonymous():
-            return RESPONSE.redirect('%s/login?came_from=%s' % (portal_state.portal_url(), REQUEST['HTTP_REFERER']))
-
+            return RESPONSE.redirect('%s/login?came_from=%s' %
+                                     (portal_state.portal_url(),
+                                      REQUEST['HTTP_REFERER'])
+                                     )
 
         form = self.request.form
         action = None
@@ -62,7 +64,8 @@ class LikeThisShizzleView(BrowserView):
         elif form.get('form.hatedit', False):
             action = rate.hateIt(self.context)
         else:
-            return _(u"We don't like ambiguity around here. Check yo self before you wreck yo self.")
+            return _(u"We don't like ambiguity around here. Check yo self "
+                     "before you wreck yo self.")
 
         if not form.get('ajax', False):
             return RESPONSE.redirect(REQUEST['HTTP_REFERER'])
@@ -75,23 +78,28 @@ class LikeThisShizzleView(BrowserView):
             if td:
                 tx = td.translate
             else:
-                # Workaround for non-registered translation domain to prevent breaking
+                # Workaround for non-registered translation domain
+                # to prevent breaking
                 def tx(msgid, target_language=None):
                     return msgid
 
             ltool = getToolByName(self, 'portal_languages')
             target_language = ltool.getPreferredLanguage()
 
-            if(action=='like'):
-                tally['msg'] = tx(_(u"You liked this. Thanks for the feedback!"), target_language=target_language)
-            elif(action=='dislike'):
-                tally['msg'] = tx(_(u"You dislike this. Thanks for the feedback!"), target_language=target_language)
-            elif(action=='undo'):
-                tally['msg'] = tx(_(u"Your vote has been removed."), target_language=target_language)
-
+            tally['msg'] = tx(self._getMessage(action),
+                              target_language=target_language)
             tally['close'] = tx(_(u"Close"), target_language=target_language)
-            
-            RESPONSE.setHeader('Content-Type', 'application/json; charset=utf-8')
+
+            RESPONSE.setHeader('Content-Type',
+                               'application/json; charset=utf-8')
             response_json = json.dumps(tally)
             RESPONSE.setHeader('content-length', len(response_json))
             return response_json
+
+    def _getMessage(self, action):
+        if (action == 'like'):
+            return _(u"You liked this. Thanks for the feedback!")
+        elif (action == 'dislike'):
+            return _(u"You dislike this. Thanks for the feedback!")
+        elif (action == 'undo'):
+            return _(u"Your vote has been removed.")

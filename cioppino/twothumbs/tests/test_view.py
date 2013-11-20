@@ -2,6 +2,7 @@ import unittest2 as unittest
 
 from cioppino.twothumbs.testing import TWOTHUMBS_INTEGRATION_TESTING
 
+
 class TestView(unittest.TestCase):
 
     layer = TWOTHUMBS_INTEGRATION_TESTING

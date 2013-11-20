@@ -19,4 +19,3 @@ def dislike(event):
 def undislike(event):
     obj = event.object
     execute(obj, event)
-
