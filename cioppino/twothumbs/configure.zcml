@@ -29,4 +29,50 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <!-- Triggers -->
+
+  <interface
+      interface=".event.ILikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object liked"
+      />
+
+  <interface
+      interface=".event.IUnlikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object unliked"
+      />
+
+  <interface
+      interface=".event.IDislikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object disliked"
+      />
+
+  <interface
+      interface=".event.IUndislikeEvent"
+      type="plone.contentrules.rule.interfaces.IRuleEventType"
+      name="Object undisliked"
+      />
+
+  <subscriber
+      for=".event.ILikeEvent"
+      handler=".triggers_handlers.like"
+      />
+
+  <subscriber
+      for=".event.IUnlikeEvent"
+      handler=".triggers_handlers.unlike"
+      />
+
+  <subscriber
+      for=".event.IDislikeEvent"
+      handler=".triggers_handlers.dislike"
+      />
+
+  <subscriber
+      for=".event.IUndislikeEvent"
+      handler=".triggers_handlers.undislike"
+      />
+
 </configure>

@@ -5,6 +5,7 @@ from plone.app.testing import IntegrationTesting
 
 from zope.configuration import xmlconfig
 
+
 class TwoThumbs(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
@@ -13,15 +14,15 @@ class TwoThumbs(PloneSandboxLayer):
         # Load ZCML
         import cioppino.twothumbs
         xmlconfig.file('configure.zcml',
-                cioppino.twothumbs,
-                context=configurationContext
-            )
+                       cioppino.twothumbs,
+                       context=configurationContext
+                       )
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'cioppino.twothumbs:default')
 
 TWOTHUMBS_FIXTURE = TwoThumbs()
 TWOTHUMBS_INTEGRATION_TESTING = IntegrationTesting(
-        bases=(TWOTHUMBS_FIXTURE,),
-        name="TwoThumbs:Integration"
-    )
+    bases=(TWOTHUMBS_FIXTURE,),
+    name="TwoThumbs:Integration"
+)
