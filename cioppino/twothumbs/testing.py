@@ -25,4 +25,4 @@ TWOTHUMBS_FIXTURE = TwoThumbs()
 TWOTHUMBS_INTEGRATION_TESTING = IntegrationTesting(
     bases=(TWOTHUMBS_FIXTURE,),
     name="TwoThumbs:Integration"
-    )
+)

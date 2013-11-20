@@ -97,7 +97,7 @@ def getTally(context):
         'ups': len(annotations[yays]),
         'downs': len(annotations[nays]),
         'mine': getMyVote(context)
-        }
+    }
 
 
 def getMyVote(context, userid=None):
