@@ -8,6 +8,23 @@ their vote at any time)
 
 Installation
 ------------
+
+.. image:: https://pypip.in/v/cioppino.twothumbs/badge.png
+    :target: https://crate.io/packages/cioppino.twothumbs/
+    :alt: Latest PyPI version
+
+.. image:: https://pypip.in/d/cioppino.twothumbs/badge.png
+    :target: https://crate.io/packages/cioppino.twothumbs/
+    :alt: Number of PyPI downloads
+
+.. image:: https://secure.travis-ci.org/collective/cioppino.twothumbs.png
+    :target: http://travis-ci.org/#!/collective/cioppino.twothumbs
+
+.. image:: https://coveralls.io/repos/collective/cioppino.twothumbs/badge.png?branch=master
+    :alt: Coverage
+    :target: https://coveralls.io/r/collective/cioppino.twothumbs
+
+
 Your mission, should you choose to accept it is to add the package to 
 your buildout config and rerun buildout. If you want it as a viewlet 
 below the content title, you must follow the viewlet directions below 
