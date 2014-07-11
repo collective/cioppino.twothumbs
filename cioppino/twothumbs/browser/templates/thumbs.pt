@@ -28,7 +28,7 @@
             <input type="submit" name="form.hatedit" value="Ugh"
                 class="allowMultiSubmit dislike-button" title="I dislike this (click again to undo)"
                 i18n:attributes="value; title"
-                tal:attributes="id  string:${context/id}_submit_like;"/>
+                tal:attributes="id  string:${context/id}_submit_dislike;"/>
         </span>
     </form>
     <div class="like-summary">
