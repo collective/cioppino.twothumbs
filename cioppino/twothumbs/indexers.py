@@ -1,5 +1,5 @@
-from plone.indexer.decorator import indexer
 from interfaces import ILoveThumbsDontYou
+from plone.indexer.decorator import indexer
 import rate
 
 

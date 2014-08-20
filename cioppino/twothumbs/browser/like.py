@@ -3,13 +3,14 @@ try:
     import json
 except:
     import simplejson as json
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.component import getMultiAdapter, queryUtility
-from zope.i18n.interfaces import ITranslationDomain
-from Products.CMFCore.utils import getToolByName
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
+from zope.component import getMultiAdapter
+from zope.component import queryUtility
+from zope.i18n.interfaces import ITranslationDomain
 
 
 class LikeWidgetView(BrowserView):

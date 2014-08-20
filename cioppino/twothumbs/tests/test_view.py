@@ -1,6 +1,5 @@
-import unittest2 as unittest
-
 from cioppino.twothumbs.testing import TWOTHUMBS_INTEGRATION_TESTING
+import unittest2 as unittest
 
 
 class TestView(unittest.TestCase):

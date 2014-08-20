@@ -1,7 +1,7 @@
-from zope.annotation.interfaces import IAnnotations
-from zope import event
 from BTrees.OIBTree import OIBTree
 from Products.CMFCore.utils import getToolByName
+from zope import event
+from zope.annotation.interfaces import IAnnotations
 
 from .event import LikeEvent, UnlikeEvent, DislikeEvent, UndislikeEvent
 
