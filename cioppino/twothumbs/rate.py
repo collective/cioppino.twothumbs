@@ -20,10 +20,10 @@ def setupAnnotations(context):
     """
     annotations = IAnnotations(context)
 
-    if not yays in annotations:
+    if yays not in annotations:
         annotations[yays] = OIBTree()
 
-    if not nays in annotations:
+    if nays not in annotations:
         annotations[nays] = OIBTree()
 
     return annotations
