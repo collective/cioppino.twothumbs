@@ -4,5 +4,5 @@ import rate
 
 
 @indexer(ILoveThumbsDontYou)
-def positive_ratings(object, **kw):
-    return rate.getTotalPositiveRatings(object)
+def positive_ratings(obj, **kw):
+    return rate.getTotalPositiveRatings(obj)

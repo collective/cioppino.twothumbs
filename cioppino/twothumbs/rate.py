@@ -2,8 +2,10 @@ from BTrees.OIBTree import OIBTree
 from Products.CMFCore.utils import getToolByName
 from zope import event
 from zope.annotation.interfaces import IAnnotations
-
-from .event import LikeEvent, UnlikeEvent, DislikeEvent, UndislikeEvent
+from .event import DislikeEvent
+from .event import LikeEvent
+from .event import UndislikeEvent
+from .event import UnlikeEvent
 
 
 # The name of the annotation fields, namespaces so
@@ -127,7 +129,4 @@ def getTotalPositiveRatings(context):
     Return the total number of positive ratings
     """
     annotations = IAnnotations(context)
-    if yays in annotations:
-        return len(annotations[yays])
-
-    return 0
+    return len(annotations.get(yays, {}))

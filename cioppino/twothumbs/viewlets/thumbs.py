@@ -1,14 +1,14 @@
-from zope.interface import implements
-from zope.viewlet.interfaces import IViewlet
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.interface import implementer
+from zope.viewlet.interfaces import IViewlet
 
 
+@implementer(IViewlet)
 class ThumbsViewlet(BrowserView):
     """
     Render the thumbs view, but using the viewlet arch
     """
-    implements(IViewlet)
     render = ViewPageTemplateFile('templates/thumbs_viewlet.pt')
 
     def __init__(self, context, request, view=None, manager=None):
