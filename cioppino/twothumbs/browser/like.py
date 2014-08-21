@@ -32,7 +32,7 @@ class LikeWidgetView(BrowserView):
 
     def canRate(self):
         registry = getUtility(IRegistry)
-        if registry['cioppino.twothumbs.anonymousvoting']:
+        if registry.get('cioppino.twothumbs.anonymousvoting', False):
             return True
         portal_state = getMultiAdapter((self.context, self.request),
                                        name='plone_portal_state')
@@ -62,7 +62,7 @@ class LikeThisShizzleView(BrowserView):
     def __call__(self, REQUEST, RESPONSE):
         registry = getUtility(IRegistry)
         anonuid = None
-        if not registry['cioppino.twothumbs.anonymousvoting']:
+        if not registry.get('cioppino.twothumbs.anonymousvoting', False):
             # First check if the user is allowed to rate
             portal_state = getMultiAdapter((self.context, self.request),
                                            name='plone_portal_state')
