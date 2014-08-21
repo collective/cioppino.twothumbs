@@ -1,16 +1,21 @@
-# fallback to simplejson for pre python2.6
 try:
     import json
 except:
+    # fallback to simplejson for pre python2.6
     import simplejson as json
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
+from plone.registry.interfaces import IRegistry
 from zope.component import getMultiAdapter
+from zope.component import getUtility
 from zope.component import queryUtility
 from zope.i18n.interfaces import ITranslationDomain
+from uuid import uuid4
+
+COOKIENAME = 'yolikeitorhateit'
 
 
 class LikeWidgetView(BrowserView):
@@ -26,6 +31,9 @@ class LikeWidgetView(BrowserView):
         return self.index()
 
     def canRate(self):
+        registry = getUtility(IRegistry)
+        if registry['cioppino.twothumbs.anonymousvoting']:
+            return True
         portal_state = getMultiAdapter((self.context, self.request),
                                        name='plone_portal_state')
         return not portal_state.anonymous()
@@ -40,30 +48,41 @@ class LikeWidgetView(BrowserView):
     def myVote(self):
         if not self.canRate():
             return 0
-
-        return rate.getMyVote(self.context)
+        portal_state = getMultiAdapter((self.context, self.request),
+                                       name='plone_portal_state')
+        anonuid = None
+        if portal_state.anonymous():
+            anonuid = self.request.cookies.get(COOKIENAME, None)
+        return rate.getMyVote(self.context, userid=anonuid)
 
 
 class LikeThisShizzleView(BrowserView):
     """ Update the like/unlike status of a product via AJAX """
 
     def __call__(self, REQUEST, RESPONSE):
-
-        # First check if the user is allowed to rate
-        portal_state = getMultiAdapter((self.context, self.request),
-                                       name='plone_portal_state')
-        if portal_state.anonymous():
-            return RESPONSE.redirect('%s/login?came_from=%s' %
-                                     (portal_state.portal_url(),
-                                      REQUEST['HTTP_REFERER'])
-                                     )
+        registry = getUtility(IRegistry)
+        anonuid = None
+        if not registry['cioppino.twothumbs.anonymousvoting']:
+            # First check if the user is allowed to rate
+            portal_state = getMultiAdapter((self.context, self.request),
+                                           name='plone_portal_state')
+            if portal_state.anonymous():
+                return RESPONSE.redirect('%s/login?came_from=%s' %
+                                         (portal_state.portal_url(),
+                                          REQUEST['HTTP_REFERER'])
+                                         )
+        else:
+            anonuid = self.request.cookies.get(COOKIENAME, None)
+            if anonuid is None:
+                anonuid = str(uuid4())
+                RESPONSE.setCookie(COOKIENAME, anonuid)
 
         form = self.request.form
         action = None
         if form.get('form.lovinit', False):
-            action = rate.loveIt(self.context)
+            action = rate.loveIt(self.context, userid=anonuid)
         elif form.get('form.hatedit', False):
-            action = rate.hateIt(self.context)
+            action = rate.hateIt(self.context, userid=anonuid)
         else:
             return _(u"We don't like ambiguity around here. Check yo self "
                      "before you wreck yo self.")
@@ -75,15 +94,7 @@ class LikeThisShizzleView(BrowserView):
             tally['action'] = action
 
             # Create handy translate function
-            td = queryUtility(ITranslationDomain, name='cioppino.twothumbs')
-            if td:
-                tx = td.translate
-            else:
-                # Workaround for non-registered translation domain
-                # to prevent breaking
-                def tx(msgid, target_language=None):
-                    return msgid
-
+            tx = self._get_tx()
             ltool = getToolByName(self, 'portal_languages')
             target_language = ltool.getPreferredLanguage()
 
@@ -96,6 +107,17 @@ class LikeThisShizzleView(BrowserView):
             response_json = json.dumps(tally)
             RESPONSE.setHeader('content-length', len(response_json))
             return response_json
+
+    def _get_tx(self):
+        td = queryUtility(ITranslationDomain, name='cioppino.twothumbs')
+        if td:
+            tx = td.translate
+        else:
+            # Workaround for non-registered translation domain
+            # to prevent breaking
+            def tx(msgid, target_language=None):
+                return msgid
+        return tx
 
     def _getMessage(self, action):
         if (action == 'like'):
