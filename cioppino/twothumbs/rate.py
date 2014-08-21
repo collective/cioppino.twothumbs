@@ -43,8 +43,9 @@ def loveIt(context, userid=None):
 
     if not userid:
         mtool = getToolByName(context, 'portal_membership')
+        if mtool.isAnonymousUser():
+            raise ValueError('userid must be passed activly for anon users')
         userid = mtool.getAuthenticatedMember().id
-
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
 
