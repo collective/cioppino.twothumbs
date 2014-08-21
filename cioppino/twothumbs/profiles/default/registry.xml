@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<registry>
+    <record name="cioppino.twothumbs.anonymousvoting">
+        <field type="plone.registry.field.Bool">
+            <title>Enable anonymous voting</title>
+            <description>Allow anonymous voting, using a UID-cookie.</description>
+        </field>
+        <value>False</value>
+    </record>
+</registry>
