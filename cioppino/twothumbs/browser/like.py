@@ -94,13 +94,18 @@ class LikeThisShizzleView(BrowserView):
             tally['action'] = action
 
             # Create handy translate function
-            tx = self._get_tx()
+            translate = self._get_translator()
             ltool = getToolByName(self, 'portal_languages')
             target_language = ltool.getPreferredLanguage()
 
-            tally['msg'] = tx(self._getMessage(action),
-                              target_language=target_language)
-            tally['close'] = tx(_(u"Close"), target_language=target_language)
+            tally['msg'] = translate(
+                self._getMessage(action),
+                target_language=target_language
+            )
+            tally['close'] = translate(
+                _(u"Close"),
+                target_language=target_language
+            )
 
             RESPONSE.setHeader('Content-Type',
                                'application/json; charset=utf-8')
@@ -108,16 +113,20 @@ class LikeThisShizzleView(BrowserView):
             RESPONSE.setHeader('content-length', len(response_json))
             return response_json
 
-    def _get_tx(self):
+    def _get_translator(self):
+        """returns a callable acting as a translator
+        """
         td = queryUtility(ITranslationDomain, name='cioppino.twothumbs')
         if td:
-            tx = td.translate
-        else:
-            # Workaround for non-registered translation domain
-            # to prevent breaking
-            def tx(msgid, target_language=None):
-                return msgid
-        return tx
+            return td.translate
+
+        def nulltranslate(msgid, target_language=None):
+            """Workaround for non-registered translation domain
+            to prevent breaking
+            """
+            return msgid
+
+        return nulltranslate
 
     def _getMessage(self, action):
         if (action == 'like'):
