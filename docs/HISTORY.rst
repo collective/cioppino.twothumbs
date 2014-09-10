@@ -3,6 +3,8 @@ Changelog
 
 1.8 (Unreleased)
 ----------------
+- allow anonyoums voting if configured (registry.xml) protected by weak 
+  cookie [jensens]
 - fix duplicated ID for accessibility [simahawk]
 - fix rendering under plone 4.3 [simahawk]
 - feat: add event and triggers for content rules [Gagaro]
