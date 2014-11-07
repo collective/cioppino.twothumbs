@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.9 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
 1.8 (2014-11-07)
 ----------------
 - allow anonyoums voting if configured (registry.xml) protected by weak
