@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.8 (Unreleased)
+1.8 (2014-11-07)
 ----------------
 - allow anonyoums voting if configured (registry.xml) protected by weak
   cookie [jensens]
