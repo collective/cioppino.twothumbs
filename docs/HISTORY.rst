@@ -4,7 +4,8 @@ Changelog
 1.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- HTML render fixes.
+  [andreasma]
 
 
 1.8 (2014-11-07)
