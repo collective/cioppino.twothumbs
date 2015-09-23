@@ -6,6 +6,8 @@ Changelog
 
 - HTML render fixes.
   [andreasma]
+- Fix bug in like view that prevented authenticated user id from being used
+  in votes when anonymous voting was enabled [cguardia]
 
 
 1.8 (2014-11-07)
