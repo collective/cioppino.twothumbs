@@ -62,16 +62,18 @@ class LikeThisShizzleView(BrowserView):
     def __call__(self, REQUEST, RESPONSE):
         registry = getUtility(IRegistry)
         anonuid = None
-        if not registry.get('cioppino.twothumbs.anonymousvoting', False):
-            # First check if the user is allowed to rate
-            portal_state = getMultiAdapter((self.context, self.request),
-                                           name='plone_portal_state')
-            if portal_state.anonymous():
-                return RESPONSE.redirect('%s/login?came_from=%s' %
-                                         (portal_state.portal_url(),
-                                          REQUEST['HTTP_REFERER'])
-                                         )
-        else:
+        anonymous_voting = registry.get('cioppino.twothumbs.anonymousvoting', False)
+        portal_state = getMultiAdapter((self.context, self.request),
+                                       name='plone_portal_state')
+
+            
+        if not anonymous_voting and portal_state.anonymous(): 
+            return RESPONSE.redirect('%s/login?came_from=%s' %
+                                     (portal_state.portal_url(),
+                                      REQUEST['HTTP_REFERER'])
+                                     )
+        
+        if anonymous_voting and portal_state.anonymous():
             anonuid = self.request.cookies.get(COOKIENAME, None)
             if anonuid is None:
                 anonuid = str(uuid4())
