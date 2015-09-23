@@ -66,17 +66,17 @@ class LikeThisShizzleView(BrowserView):
         portal_state = getMultiAdapter((self.context, self.request),
                                        name='plone_portal_state')
 
-        if not anonymous_voting and portal_state.anonymous():
-            return RESPONSE.redirect('%s/login?came_from=%s' %
-                                     (portal_state.portal_url(),
-                                      REQUEST['HTTP_REFERER'])
-                                     )
-
-        if anonymous_voting and portal_state.anonymous():
-            anonuid = self.request.cookies.get(COOKIENAME, None)
-            if anonuid is None:
-                anonuid = str(uuid4())
-                RESPONSE.setCookie(COOKIENAME, anonuid)
+        if portal_state.anonymous():
+            if not anonymous_voting:
+                return RESPONSE.redirect('%s/login?came_from=%s' %
+                                         (portal_state.portal_url(),
+                                          REQUEST['HTTP_REFERER'])
+                                         )
+            else:
+                anonuid = self.request.cookies.get(COOKIENAME, None)
+                if anonuid is None:
+                    anonuid = str(uuid4())
+                    RESPONSE.setCookie(COOKIENAME, anonuid)
 
         form = self.request.form
         action = None
