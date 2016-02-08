@@ -12,40 +12,45 @@
     color: red;
 }
 
-
-input.like-button, input.dislike-button{
-    padding: 10px 5px;
+form input.like-button,
+form input.dislike-button {
+    padding: 10px 0;
     background-color:inherit;
 	background-image: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png);
     background-repeat: no-repeat;
-    border: 1px solid #eee;
+    border-width: 0;
     cursor: pointer;
+    width: 20px;
+    text-indent: -3000px;
+    white-space: nowrap;
 }
 
-form input.like-button{
-    padding-left: 30px;
-    background-position: -39px -27px;
+form input.like-button {
+    background-position: -44px -27px;
+    padding-left: 0;
 }
 
-form input.dislike-button{
-    background-position: -13px -23px;
-    text-indent: -3000px; 
-    white-space: nowrap; 
-    width: 35px;
+.thumb-rating form {
+    text-align: right;
 }
 
-form .selected input.like-button{
-    background-position: -39px 5px;
+form input.dislike-button {
+    background-position: -18px -23px;
+    margin-left: 5px;
 }
 
-form .selected input.dislike-button{
-    background-position: -13px 10px;
+form .selected input.like-button {
+    background-position: -44px 5px;
 }
 
-.twothumbs-feedback{
+form .selected input.dislike-button {
+    background-position: -18px 10px;
+}
+
+.twothumbs-feedback {
     position: absolute;
 	z-index: 1;
-	width: 200%;
+	width: 400%;
 	margin-left: -52%;
 	padding: 4%;
 	font-size: 90%;
@@ -54,6 +59,7 @@ form .selected input.dislike-button{
 	text-align: center;
     right: 0; /* dexterity */
 }
+
 .twothumbs-feedback a.close-link:link {
 	border-bottom: 0;
 	float: right;

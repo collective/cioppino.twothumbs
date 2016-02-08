@@ -12,10 +12,10 @@ jQuery(function(jq){
 				jq('<div>').addClass('twothumbs-feedback').hide().load('./login-to-rate', function() {
 					var me = jq(this);
 					me.slideDown().find('.close-link').click(function(event) {
-						event.preventDefault(); 
+						event.preventDefault();
 						jq(this).closest('.twothumbs-feedback').slideUp();
 					});
- 
+
 				}).appendTo(container);
 			} else {
 				login.slideDown();
@@ -25,15 +25,14 @@ jQuery(function(jq){
 			// Can rate, go ahead!
 			me.blur();
 			var action = me.attr('name');
-			var summary = form.siblings('.like-summary');
-			var upResults = summary.find('.total-thumbs-up .tally-total');
-			var downResults = summary.find('.total-thumbs-down .tally-total');
+			var upResults = form.find('.total-thumbs-up .tally-total');
+			var downResults = form.find('.total-thumbs-down .tally-total');
 			if (form){
 				jq.post(form.attr("action"),action+'=FOOBAR&ajax=1', function(data) {
 					/* update the text */
 					upResults.text(data.ups);
 					downResults.text(data.downs);
-					
+
 					/* update the class */
 					form.find('.thumbs-down').removeClass('selected');
 					form.find('.thumbs-up').removeClass('selected');
@@ -44,21 +43,20 @@ jQuery(function(jq){
 					}
 
 					/* extra feedback */
-					var container = summary.closest('.thumb-rating');
-					var feedback = container.find('.twothumbs-feedback');
-					if(feedback.length>0) {
+					var feedback = form.find('.twothumbs-feedback');
+					if(feedback.length) {
 						feedback.remove();
 					}
 					var id = 'ttf-' + (new Date()).getTime();
 					jq('<div>').attr('id', id).addClass('twothumbs-feedback').html(data.msg).
 					prepend('<a class="close-link" title="' + data.close + '" href="#">&nbsp;</a>').
-					appendTo(container).hide().slideDown().find('.close-link').click(function(event) {
-						event.preventDefault(); 
+					appendTo(form).hide().slideDown().find('.close-link').click(function(event) {
+						event.preventDefault();
 						jq(this).closest('.twothumbs-feedback').slideUp();
 					});
 					setTimeout((function() {
 						jq('#' + id).slideUp();
-					}), 8000);
+					}), 2000);
 				}, 'json');
 			}
 		}
