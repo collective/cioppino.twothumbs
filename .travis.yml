@@ -1,7 +1,7 @@
 language: python
 python: 2.7
 install:
-  - sudo apt-get -qq install libfreetype6-dev liblcms1-dev libwebp-dev
+  - sudo apt-get -qq install libfreetype6-dev liblcms1-dev
   - mkdir -p buildout-cache/eggs
   - mkdir -p buildout-cache/downloads
   - python bootstrap.py -c travis.cfg
