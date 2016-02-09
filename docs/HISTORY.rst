@@ -4,7 +4,7 @@ Changelog
 1.9 (unreleased)
 ----------------
 
-- Add compatability for Plone 5
+- Add compatability for Plone 5.
   [pbauer]
 
 - Make visual appearance more discreet by moving the number of votes next to
