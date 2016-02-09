@@ -34,6 +34,12 @@ skip to the section on browser views.
 Make sure you have installed or "Activated" the product if things aren't
 working as expected.
 
+Compatability
+-------------
+
+cioppino.twothumbs works with Plone 4.0, 4.1, 4.2, 4.3 and 5.0
+
+
 As a Viewlet
 ------------
 
