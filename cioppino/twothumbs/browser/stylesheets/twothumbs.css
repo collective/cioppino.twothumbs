@@ -3,10 +3,13 @@
 	position: relative;
 }
 
+.thumb-rating form {
+    text-align: right;
+}
+
 .total-thumbs-up .tally-total{
     color: green;
 }
-
 
 .total-thumbs-down .tally-total{
     color: red;
@@ -14,7 +17,7 @@
 
 form input.like-button,
 form input.dislike-button {
-    padding: 10px 0;
+    padding: 8px 0;
     background-color:transparent;
 	background-image: url(++resource++cioppino.twothumbs.images/thumbs-sprite.png);
     background-repeat: no-repeat;
@@ -25,13 +28,16 @@ form input.dislike-button {
     white-space: nowrap;
 }
 
+/* Reset button styles of Plone 5  */
+form input.like-button:hover,
+form input.dislike-button:hover {
+    box-shadow: none;
+    background-color: transparent;
+}
+
 form input.like-button {
     background-position: -44px -27px;
     padding-left: 0;
-}
-
-.thumb-rating form {
-    text-align: right;
 }
 
 form input.dislike-button {
@@ -57,7 +63,7 @@ form .selected input.dislike-button {
 	border: 1px solid #555;
 	background-color: #ddd;
 	text-align: center;
-    right: 0; /* dexterity */
+    right: 0;
 }
 
 .twothumbs-feedback a.close-link:link {

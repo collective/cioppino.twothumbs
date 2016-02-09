@@ -27,8 +27,9 @@ jQuery(function(jq){
 			var action = me.attr('name');
 			var upResults = form.find('.total-thumbs-up .tally-total');
 			var downResults = form.find('.total-thumbs-down .tally-total');
+			var auth_key = form.find('input[name="_authenticator"]').val();
 			if (form){
-				jq.post(form.attr("action"),action+'=FOOBAR&ajax=1', function(data) {
+				jq.post(form.attr("action"),action+'=FOOBAR&ajax=1&_authenticator='+auth_key, function(data) {
 					/* update the text */
 					upResults.text(data.ups);
 					downResults.text(data.downs);
