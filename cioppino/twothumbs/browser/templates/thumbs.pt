@@ -16,12 +16,16 @@
     <form action="you-know-you-like-it" method="post"
         tal:attributes="class python:canRate and 'enabled' or 'disabled';
                         action  string:${context/absolute_url}/you-know-you-like-it;">
+        <span tal:replace="structure context/@@authenticator/authenticator"/>
         <span
             tal:attributes="class   python:'thumbs-up' + (myVote==1 and ' selected' or '')">
             <input type="submit" name="form.lovinit" value="Like"
                 class="allowMultiSubmit like-button" title="I like this (click again to undo)"
                 i18n:attributes="value; title"
                 tal:attributes="id  string:${context/id}_submit_like;" />
+            <span class="total-thumbs-up">
+                <span class="tally-total" tal:content="stats/ups" />
+            </span>
         </span>
         <span
             tal:attributes="class   python:'thumbs-down' + (myVote==-1 and ' selected' or '')">
@@ -29,18 +33,11 @@
                 class="allowMultiSubmit dislike-button" title="I dislike this (click again to undo)"
                 i18n:attributes="value; title"
                 tal:attributes="id  string:${context/id}_submit_dislike;"/>
+            <span class="total-thumbs-down" title="">
+                <span class="tally-total" tal:content="stats/downs" />
+            </span>
+
         </span>
     </form>
-    <div class="like-summary">
-        <span class="total-thumbs-up" i18n:translate="">
-            <span class="tally-total" tal:content="stats/ups"
-                  i18n:name="likes" /> likes,
-        </span>
-        <span class="total-thumbs-down" i18n:translate="">
-            <span class="tally-total" tal:content="stats/downs"
-                  i18n:name="dislikes" /> dislikes
-        </span>
-
-    </div>
 </div>
 </html>

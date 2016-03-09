@@ -1,5 +1,5 @@
 from cioppino.twothumbs.testing import TWOTHUMBS_INTEGRATION_TESTING
-import unittest2 as unittest
+import unittest
 
 
 class TestView(unittest.TestCase):

@@ -34,6 +34,12 @@ skip to the section on browser views.
 Make sure you have installed or "Activated" the product if things aren't
 working as expected.
 
+Compatability
+-------------
+
+cioppino.twothumbs works with Plone 4.0, 4.1, 4.2, 4.3 and 5.0
+
+
 As a Viewlet
 ------------
 
@@ -56,11 +62,11 @@ to show the thumbs.
 
 Dexterity
 ^^^^^^^^^
-Cioppino.TwoThumbs is now available as a behavior for dexterity content types. In
-the dexterity configuration UI, it will be listed under "Behaviors" for any new
-content type you create after the product has been installed. You may also
-manually add this behavior to your type by adding the following to
-../path/to/profiles/default/types/your_type.xml::
+Cioppino.TwoThumbs provides a behavior for dexterity content types. In
+the dexterity configuration UI, it will be listed under "Behaviors".
+
+You may also manually add this behavior to your type by adding the following
+to ``../path/to/profiles/default/types/your_type.xml``::
 
     ...
     <property name="behaviors">
@@ -84,14 +90,14 @@ type since it requires access to content object annotations.
 Migration
 ---------
 If you used to use plone.contentratings and want to migrate to the thumbs
-product, there is an example in the trunk of PloneSoftwareCenter. It's
-pretty easy. Please see http://svn.plone.org/svn/collective/Products.PloneSoftwareCenter/tags/1.6.1/Products/PloneSoftwareCenter/Extensions/migrateratings.py for an example.
+product, there is an example in PloneSoftwareCenter. It's
+pretty easy. Please see https://github.com/collective/Products.PloneSoftwareCenter/blob/master/Products/PloneSoftwareCenter/Extensions/migrateratings.py for an example.
 
 
 Anonymous Voting
 ----------------
 Anonymous voting is possible, but **weak**. An unique identifier is
-generated and set as cookie on fiurst vote. Then the uid is used as
+generated and set as cookie on first vote. Then the uid is used as
 identifier for later display/changes. To enable anonymous voting go to
 Plones configuration registry, search for ``cioppino.twothumbs.anonymous``
 entry and edit it. Alternativly you can add your own ``registry.xml`` to
@@ -104,13 +110,13 @@ your sites profile::
         </record>
     </registry>
 
-Its easy to fake anonymous votes, so dont trust them much. A todo here
+It's easy to fake anonymous votes, so dont trust them much. A todo here
 is to add a captcha, which would make automated vote-faking impossible.
 
 
 Bugs/Suggestions/Help
 ---------------------
-Please file bugs at https://github.com/eleddy/cioppino.twothumbs.
+Please file bugs at https://github.com/collective/cioppino.twothumbs.
 
 
 Credits
