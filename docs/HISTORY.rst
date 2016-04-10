@@ -4,7 +4,7 @@ Changelog
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added upgrade for Plone 5 to recognize css- and js-file. [andreasma]
 
 
 2.0 (2016-03-09)
