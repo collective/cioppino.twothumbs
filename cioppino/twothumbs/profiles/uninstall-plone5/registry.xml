@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<registry>
+    <records remove="true" prefix="plone.bundles/cioppino.twothumbs"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+        <value key="enabled">True</value>
+        <value key="jscompilation">++resource++cioppino.twothumbs.javascripts/twothumbs.js</value>
+        <value key="csscompilation">++resource++cioppino.twothumbs.stylesheets/twothumbs.css</value>
+        <value key="last_compilation">2019-11-26 00:00:00</value>
+        <value key="compile">False</value>
+        <value key="depends">plone</value>
+    </records>
+    <record remove="true" name="cioppino.twothumbs.anonymousvoting">
+        <field type="plone.registry.field.Bool">
+            <title>Enable anonymous voting</title>
+            <description>Allow anonymous voting, using a UID-cookie.</description>
+        </field>
+        <value>False</value>
+    </record>
+</registry>

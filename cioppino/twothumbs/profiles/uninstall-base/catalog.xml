@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+    <index remove="true" name="positive_ratings" meta_type="FieldIndex">
+        <indexed_attr remove="true" value="positive_ratings"/>
+    </index>
+    <column remove="true" value="positive_ratings"/>
+</object>
