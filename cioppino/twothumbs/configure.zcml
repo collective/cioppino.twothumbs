@@ -4,6 +4,7 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="cioppino.twothumbs">
 
   <five:registerPackage package="." initialize=".initialize" />
@@ -22,12 +23,59 @@
     />
 
   <genericsetup:registerProfile
-      name="default"
-      title="cioppino.twothumbs"
-      directory="profiles/default"
-      description="Installs the cioppino.twothumbs package"
+      name="install-base"
+      title="cioppino.twothumbs base profile"
+      directory="profiles/base"
+      description="The cioppino.twothumbs package base profile."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <genericsetup:registerProfile
+      zcml:condition="not-have plone-5"
+      name="default"
+      title="cioppino.twothumbs"
+      directory="profiles/plone4"
+      description="Installs the cioppino.twothumbs add-on Plone4 specific configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="have plone-5"
+      name="default"
+      title="cioppino.twothumbs"
+      directory="profiles/plone5"
+      description="Installs the cioppino.twothumbs add-on Plone5 specific configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall-base"
+      title="cioppino.twothumbs uninstall base profile"
+      directory="profiles/uninstall-base"
+      description="The cioppino.twothumbs package uninstall base profile."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="not-have plone-5"
+      name="uninstall"
+      title="cioppino.twothumbs (uninstall for Plone 4)"
+      directory="profiles/uninstall-plone4"
+      description="Uninstalls the cioppino.twothumbs add-on Plone4 specific configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="have plone-5"
+      name="uninstall"
+      title="cioppino.twothumbs (uninstall for Plone 5)"
+      directory="profiles/uninstall-plone5"
+      description="Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <utility factory=".setuphandlers.HiddenProfiles" name="cioppino.twothumbs" />
+  <utility factory=".setuphandlers.HiddenProducts" name="cioppino.twothumbs" />
 
   <!-- Triggers -->
 

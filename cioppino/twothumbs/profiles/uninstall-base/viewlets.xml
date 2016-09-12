@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object>
+ <order manager="plone.belowcontenttitle" skinname="*">
+  <viewlet remove="true" name="cioppino.twothumbs"/>
+ </order>
+</object>
