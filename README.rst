@@ -9,14 +9,6 @@ their vote at any time)
 Installation
 ------------
 
-.. image:: https://pypip.in/v/cioppino.twothumbs/badge.png
-    :target: https://crate.io/packages/cioppino.twothumbs/
-    :alt: Latest PyPI version
-
-.. image:: https://pypip.in/d/cioppino.twothumbs/badge.png
-    :target: https://crate.io/packages/cioppino.twothumbs/
-    :alt: Number of PyPI downloads
-
 .. image:: https://secure.travis-ci.org/collective/cioppino.twothumbs.png
     :target: http://travis-ci.org/#!/collective/cioppino.twothumbs
 
@@ -33,6 +25,7 @@ skip to the section on browser views.
 
 Make sure you have installed or "Activated" the product if things aren't
 working as expected.
+
 
 Compatability
 -------------
