@@ -1,13 +1,20 @@
 Changelog
 =========
 
-2.1 (unreleased)
+2.1.1 (2016-09-12)
+------------------
+
+- Re-release 2.1.
+  [timo]
+
+
+2.1 (2016-09-12)
 ----------------
 
 - Mv docs/HISTORY.txt -> CHANGES.rst to follow common best practice.
   [timo]
 
-- Added upgrade for Plone 5 to recognize css- and js-file. 
+- Added upgrade for Plone 5 to recognize css- and js-file.
   [andreasma]
 
 - Complete Plone 4 and Plone 5 compat using resource registries and splitted GS
