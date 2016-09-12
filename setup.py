@@ -3,7 +3,7 @@ import os
 
 version = '2.1.dev0'
 description = open("README.rst").read() + "\n"
-description += open(os.path.join("docs", "HISTORY.rst")).read()
+description += open("CHANGES.rst").read()
 
 setup(
     name='cioppino.twothumbs',

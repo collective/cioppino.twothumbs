@@ -4,11 +4,16 @@ Changelog
 2.1 (unreleased)
 ----------------
 
-- Added upgrade for Plone 5 to recognize css- and js-file. [andreasma]
+- Mv docs/HISTORY.txt -> CHANGES.rst to follow common best practice.
+  [timo]
+
+- Added upgrade for Plone 5 to recognize css- and js-file. 
+  [andreasma]
 
 - Complete Plone 4 and Plone 5 compat using resource registries and splitted GS
   profiles
   [sneridagh]
+
 
 2.0 (2016-03-09)
 ----------------
