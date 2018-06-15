@@ -3,7 +3,6 @@ try:
 except:
     # fallback to simplejson for pre python2.6
     import simplejson as json
-from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from cioppino.twothumbs import _
@@ -96,16 +95,14 @@ class LikeThisShizzleView(BrowserView):
 
             # Create handy translate function
             translate = self._get_translator()
-            ltool = getToolByName(self, 'portal_languages')
-            target_language = ltool.getPreferredLanguage()
 
             tally['msg'] = translate(
                 self._getMessage(action),
-                target_language=target_language
+                context=self.request
             )
             tally['close'] = translate(
                 _(u"Close"),
-                target_language=target_language
+                context=self.request
             )
 
             RESPONSE.setHeader('Content-Type',
