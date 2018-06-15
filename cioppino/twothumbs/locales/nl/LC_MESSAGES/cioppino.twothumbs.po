@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"PO-Revision-Date: 2012-05-15 12:56+0200\n"
+"Last-Translator: Fred van Dijk <f.vandijk@zestsoftware.nl>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-code: nl\n"
+"Language-name: Nederlands\n"
+"X-Is-Fallback-For: nl-be nl-nl\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: cioppino.twothumbs\n"
+
+#: ./browser/templates/thumbs.pt:40
+msgid "${dislikes} dislikes"
+msgstr "${dislikes} vind dit niet leuk"
+
+#: ./browser/templates/thumbs.pt:36
+msgid "${likes} likes,"
+msgstr "${likes} vind dit leuk"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "${login} to rate ${close-link}"
+msgstr "${login} om te stemmen ${close-link}"
+
+#: ./browser/templates/login_to_rate.pt:18
+msgid "Close"
+msgstr "Sluiten"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "I dislike this (click again to undo)"
+msgstr "Vind ik niet leuk (opnieuw klikken om ongedaan te maken)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "I like this (click again to undo)"
+msgstr "Vind ik leuk (opnieuw klikken om ongedaan te maken)"
+
+#: ./browser/templates/thumbs.pt:21
+msgid "Like"
+msgstr "Is leuk"
+
+#: ./browser/templates/login_to_rate.pt:15
+msgid "Log in"
+msgstr "Aanmelden"
+
+#: ./browser/templates/thumbs.pt:28
+msgid "Ugh"
+msgstr "Is niet leuk"
+
+#: ./browser/like.py:60
+msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
+msgstr "We willen het liefst geen onduidelijkheid."
+
+#: ./browser/like.py:79
+msgid "You dislike this. Thanks for the feedback!"
+msgstr "Dit is niet leuk/interessant. Bedankt voor uw feedback!"
+
+#: ./browser/like.py:77
+msgid "You liked this. Thanks for the feedback!"
+msgstr "Dit is leuk/interessant. Bedankt voor uw feedback!"
+
+#: ./browser/like.py:81
+msgid "Your vote has been removed."
+msgstr "Uw feedback is verwijderd."
