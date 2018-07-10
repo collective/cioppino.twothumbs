@@ -4,7 +4,8 @@ Changelog
 2.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix like/dislike inline popup text translations for composed language domains like nl-be.
+  [fredvd]
 
 
 2.1.1 (2016-09-12)
