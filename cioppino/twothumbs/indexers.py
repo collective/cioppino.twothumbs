@@ -1,4 +1,4 @@
-from .interfaces import ILoveThumbsDontYou
+from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
 from plone.indexer.decorator import indexer
 import cioppino.twothumbs.rate as rate
 
