@@ -12,7 +12,7 @@
   <include package=".browser" />
   <include package=".viewlets" />
 
-  <adapter name="positive_ratings" factory=".indexers.positive_ratings" />
+  <adapter name="positive_ratings" factory="cioppino.twothumbs.indexers.positive_ratings" />
 
   <include package="plone.behavior" file="meta.zcml" />
 

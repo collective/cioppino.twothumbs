@@ -1,6 +1,6 @@
-from interfaces import ILoveThumbsDontYou
+from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
 from plone.indexer.decorator import indexer
-import rate
+import cioppino.twothumbs.rate as rate
 
 
 @indexer(ILoveThumbsDontYou)

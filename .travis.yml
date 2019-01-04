@@ -1,16 +1,50 @@
 language: python
-python: 2.7
+python:
+  - "2.7"
+  - "3.6"
+
+sudo: false
+
+cache:
+  pip: true
+  directories:
+    - $HOME/buildout-cache
+
+matrix:
+  include:
+  - python: "2.7"
+    env: PLONE_VERSION=4.3.x
+  - python: "2.7"
+    env: PLONE_VERSION=5.1.x
+  - python: "2.7"
+    env: PLONE_VERSION=5.2.x
+  - python: "3.6"
+    env: PLONE_VERSION=5.2.x
+  exclude:
+  - python: "2.7"
+  - python: "3.6"
+
+
+before_install:
+  - mkdir -p $HOME/buildout-cache/{eggs,downloads}
+  - mkdir $HOME/.buildout
+  - echo "[buildout]" > $HOME/.buildout/default.cfg
+  - echo "download-cache = $HOME/buildout-cache/downloads" >> $HOME/.buildout/default.cfg
+  - echo "eggs-directory = $HOME/buildout-cache/eggs" >> $HOME/.buildout/default.cfg
+  - pip install -r requirements.txt
+
 install:
   - sudo apt-get -qq install libfreetype6-dev liblcms1-dev
-  - mkdir -p buildout-cache/eggs
-  - mkdir -p buildout-cache/downloads
-  - python bootstrap.py -c travis.cfg
-  - bin/buildout -N -t 3 -c travis.cfg install download install
-  - bin/buildout -N -t 3 -c travis.cfg
+  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" travis.cfg
+  - buildout -t 10 -c travis.cfg
+
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-script: bin/test && bin/code-analysis
+script:
+  - bin/code-analysis
+  - bin/test
+
 after_success:
   - bin/coverage.sh
   - pip install coveralls
