@@ -15,8 +15,6 @@ matrix:
   - python: "2.7"
     env: PLONE_VERSION=4.3.x
   - python: "2.7"
-    env: PLONE_VERSION=5.0.x
-  - python: "2.7"
     env: PLONE_VERSION=5.1.x
   - python: "2.7"
     env: PLONE_VERSION=5.2.x
