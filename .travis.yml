@@ -2,6 +2,7 @@ language: python
 python:
   - "2.7"
   - "3.6"
+  - "3.7"
 
 sudo: false
 
@@ -18,9 +19,12 @@ matrix:
     env: PLONE_VERSION=5.2.x
   - python: "3.6"
     env: PLONE_VERSION=5.2.x
+  - python: "3.7"
+    env: PLONE_VERSION=5.2.x
   exclude:
   - python: "2.7"
   - python: "3.6"
+  - python: "3.7"
 
 
 before_install:
