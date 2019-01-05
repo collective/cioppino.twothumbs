@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.1.2 (unreleased)
+2.1.2 (2019-01-05)
 ------------------
 
 - Fix like/dislike inline popup text translations for composed language domains like nl-be.
