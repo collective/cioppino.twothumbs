@@ -27,10 +27,12 @@ Make sure you have installed or "Activated" the product if things aren't
 working as expected.
 
 
-Compatability
+Compatibility
 -------------
 
-cioppino.twothumbs works with Plone 4.0, 4.1, 4.2, 4.3 and 5.0
+cioppino.twothumbs works with Plone 4.3, 5.1, 5.2.
+It works on Python 2.7, and for Plone 5.2 it also works on Python 3.6.
+Those are the versions that are automatically tested.
 
 
 As a Viewlet

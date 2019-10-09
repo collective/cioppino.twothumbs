@@ -7,7 +7,8 @@ Changelog
 - Register collection criterions for our positive ratings field.
   Using it as a sorting criterion works.
   Using it as a selection criterion (X thumbs or less/more than X thumbs)
-  needs a `fix in plone.app.querystring <https://github.com/plone/plone.app.querystring/issues/93>`_.
+  needs a `fix in plone.app.querystring <https://github.com/plone/plone.app.querystring/issues/93>`_,
+  specifically version 1.2.13 (Plone 4) or 1.4.12 (Plone 5.1) or higher.
   [maurits]
 
 - Fixed error: nulltranslate has no "context" argument.
