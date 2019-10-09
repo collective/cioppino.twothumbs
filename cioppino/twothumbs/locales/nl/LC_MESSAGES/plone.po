@@ -16,6 +16,7 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
+"X-Is-Fallback-For: nl-be nl-nl\n"
 
 #: profiles/base/registry.xml
 msgid "Metadata"
