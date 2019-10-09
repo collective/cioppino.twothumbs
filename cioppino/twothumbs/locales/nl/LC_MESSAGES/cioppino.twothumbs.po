@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"POT-Creation-Date: 2019-10-09 13:39+0000\n"
 "PO-Revision-Date: 2012-05-15 12:56+0200\n"
 "Last-Translator: Fred van Dijk <f.vandijk@zestsoftware.nl>\n"
 "Language-Team: Dutch\n"
@@ -9,37 +9,49 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: cioppino.twothumbs\n"
+"Language: nl\n"
 "Language-code: nl\n"
 "Language-name: Nederlands\n"
 "X-Is-Fallback-For: nl-be nl-nl\n"
-"Preferred-Encodings: utf-8 latin1\n"
-"Domain: cioppino.twothumbs\n"
-
-#: ./browser/templates/thumbs.pt:40
-msgid "${dislikes} dislikes"
-msgstr "${dislikes} vind dit niet leuk"
-
-#: ./browser/templates/thumbs.pt:36
-msgid "${likes} likes,"
-msgstr "${likes} vind dit leuk"
 
 #: ./browser/templates/login_to_rate.pt:18
 msgid "${login} to rate ${close-link}"
 msgstr "${login} om te stemmen ${close-link}"
 
+#: ./configure.zcml:23
+msgid "Adds the ability to rate content based on facebook-like thumbs."
+msgstr ""
+
+#: ./browser/like.py:104
 #: ./browser/templates/login_to_rate.pt:18
 msgid "Close"
 msgstr "Sluiten"
 
-#: ./browser/templates/thumbs.pt:28
+#: ./configure.zcml:23
+msgid "Content Ratings (cioppino.twothumbs)"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:32
 msgid "I dislike this (click again to undo)"
 msgstr "Vind ik niet leuk (opnieuw klikken om ongedaan te maken)"
 
-#: ./browser/templates/thumbs.pt:21
+#: ./browser/templates/thumbs.pt:22
 msgid "I like this (click again to undo)"
 msgstr "Vind ik leuk (opnieuw klikken om ongedaan te maken)"
 
-#: ./browser/templates/thumbs.pt:21
+#: ./configure.zcml:40
+msgid "Installs the cioppino.twothumbs add-on Plone4 specific configuration"
+msgstr ""
+
+#: ./configure.zcml:49
+msgid "Installs the cioppino.twothumbs add-on Plone5 specific configuration"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:22
 msgid "Like"
 msgstr "Is leuk"
 
@@ -47,22 +59,74 @@ msgstr "Is leuk"
 msgid "Log in"
 msgstr "Aanmelden"
 
-#: ./browser/templates/thumbs.pt:28
+#: ./configure.zcml:109
+msgid "Object disliked"
+msgstr ""
+
+#: ./configure.zcml:97
+msgid "Object liked"
+msgstr ""
+
+#: ./configure.zcml:115
+msgid "Object undisliked"
+msgstr ""
+
+#: ./configure.zcml:103
+msgid "Object unliked"
+msgstr ""
+
+#: ./configure.zcml:31
+msgid "The cioppino.twothumbs package base profile."
+msgstr ""
+
+#: ./configure.zcml:57
+msgid "The cioppino.twothumbs package uninstall base profile."
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:32
 msgid "Ugh"
 msgstr "Is niet leuk"
 
-#: ./browser/like.py:60
+#: ./configure.zcml:66
+msgid "Uninstalls the cioppino.twothumbs add-on Plone4 specific configuration"
+msgstr ""
+
+#: ./configure.zcml:75
+msgid "Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
+msgstr ""
+
+#: ./browser/like.py:87
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
 msgstr "We willen het liefst geen onduidelijkheid."
 
-#: ./browser/like.py:79
+#: ./browser/like.py:133
 msgid "You dislike this. Thanks for the feedback!"
 msgstr "Dit is niet leuk/interessant. Bedankt voor uw feedback!"
 
-#: ./browser/like.py:77
+#: ./browser/like.py:131
 msgid "You liked this. Thanks for the feedback!"
 msgstr "Dit is leuk/interessant. Bedankt voor uw feedback!"
 
-#: ./browser/like.py:81
+#: ./browser/like.py:135
 msgid "Your vote has been removed."
 msgstr "Uw feedback is verwijderd."
+
+#: ./configure.zcml:40
+msgid "cioppino.twothumbs"
+msgstr ""
+
+#: ./configure.zcml:66
+msgid "cioppino.twothumbs (uninstall for Plone 4)"
+msgstr ""
+
+#: ./configure.zcml:75
+msgid "cioppino.twothumbs (uninstall for Plone 5)"
+msgstr ""
+
+#: ./configure.zcml:31
+msgid "cioppino.twothumbs base profile"
+msgstr ""
+
+#: ./configure.zcml:57
+msgid "cioppino.twothumbs uninstall base profile"
+msgstr ""
