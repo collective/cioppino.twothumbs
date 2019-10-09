@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.1.3 (unreleased)
+2.2.0 (unreleased)
 ------------------
 
 - Register collection criterions for our positive ratings field.
