@@ -17,6 +17,12 @@ from uuid import uuid4
 COOKIENAME = 'yolikeitorhateit'
 
 
+def nulltranslate(msgid, *args, **kwargs):
+    """Workaround for non-registered translation domain to prevent breaking.
+    """
+    return msgid
+
+
 class LikeWidgetView(BrowserView):
     """ Display the like/unlike widget. """
     index = ViewPageTemplateFile('templates/thumbs.pt')
@@ -117,12 +123,6 @@ class LikeThisShizzleView(BrowserView):
         td = queryUtility(ITranslationDomain, name='cioppino.twothumbs')
         if td:
             return td.translate
-
-        def nulltranslate(msgid, *args, **kwargs):
-            """Workaround for non-registered translation domain
-            to prevent breaking
-            """
-            return msgid
 
         return nulltranslate
 
