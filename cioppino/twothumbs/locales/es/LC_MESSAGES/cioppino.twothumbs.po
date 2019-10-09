@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2011-08-25 11:53+0000\n"
+"POT-Creation-Date: 2019-10-09 13:21+0000\n"
 "PO-Revision-Date: 2011-08-25 08:35-0300\n"
 "Last-Translator: Marcos F. Romero <marcos.romero@inter-cultura.com>\n"
 "Language-Team: Spanish\n"
@@ -16,31 +16,40 @@ msgstr ""
 "Generated-By: zope/app/locales/extract.py\n"
 "Language: es\n"
 
-#: ./browser/templates/thumbs.pt:40
-msgid "${dislikes} dislikes"
-msgstr "${dislikes} no le gusta"
-
-#: ./browser/templates/thumbs.pt:36
-msgid "${likes} likes,"
-msgstr "${likes} le gusta,"
-
 #: ./browser/templates/login_to_rate.pt:18
 msgid "${login} to rate ${close-link}"
 msgstr "${login} para calificar ${close-link}"
 
+#: ./configure.zcml:23
+msgid "Adds the ability to rate content based on facebook-like thumbs."
+msgstr ""
+
+#: ./browser/like.py:104
 #: ./browser/templates/login_to_rate.pt:18
 msgid "Close"
 msgstr "Cerrar"
 
-#: ./browser/templates/thumbs.pt:28
+#: ./configure.zcml:23
+msgid "Content Ratings (cioppino.twothumbs)"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:32
 msgid "I dislike this (click again to undo)"
 msgstr "No me gusta (otro click para deshacer)"
 
-#: ./browser/templates/thumbs.pt:21
+#: ./browser/templates/thumbs.pt:22
 msgid "I like this (click again to undo)"
 msgstr "Me gusta (otro click para deshacer)"
 
-#: ./browser/templates/thumbs.pt:21
+#: ./configure.zcml:40
+msgid "Installs the cioppino.twothumbs add-on Plone4 specific configuration"
+msgstr ""
+
+#: ./configure.zcml:49
+msgid "Installs the cioppino.twothumbs add-on Plone5 specific configuration"
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:22
 msgid "Like"
 msgstr "Me gusta"
 
@@ -48,23 +57,74 @@ msgstr "Me gusta"
 msgid "Log in"
 msgstr "Ingresá"
 
-#: ./browser/templates/thumbs.pt:28
+#: ./configure.zcml:109
+msgid "Object disliked"
+msgstr ""
+
+#: ./configure.zcml:97
+msgid "Object liked"
+msgstr ""
+
+#: ./configure.zcml:115
+msgid "Object undisliked"
+msgstr ""
+
+#: ./configure.zcml:103
+msgid "Object unliked"
+msgstr ""
+
+#: ./configure.zcml:31
+msgid "The cioppino.twothumbs package base profile."
+msgstr ""
+
+#: ./configure.zcml:57
+msgid "The cioppino.twothumbs package uninstall base profile."
+msgstr ""
+
+#: ./browser/templates/thumbs.pt:32
 msgid "Ugh"
 msgstr "No me gusta"
 
-#: ./browser/like.py:60
+#: ./configure.zcml:66
+msgid "Uninstalls the cioppino.twothumbs add-on Plone4 specific configuration"
+msgstr ""
+
+#: ./configure.zcml:75
+msgid "Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
+msgstr ""
+
+#: ./browser/like.py:87
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
 msgstr "No nos gusta la ambigüedad por aquí. Revísate antes de que naufragues."
 
-#: ./browser/like.py:79
+#: ./browser/like.py:133
 msgid "You dislike this. Thanks for the feedback!"
 msgstr "No te gustó. Gracias por tu calificación."
 
-#: ./browser/like.py:77
+#: ./browser/like.py:131
 msgid "You liked this. Thanks for the feedback!"
 msgstr "Te gustó. Gracias por tu calificación."
 
-#: ./browser/like.py:81
+#: ./browser/like.py:135
 msgid "Your vote has been removed."
 msgstr "Borramos tu calificación."
 
+#: ./configure.zcml:40
+msgid "cioppino.twothumbs"
+msgstr ""
+
+#: ./configure.zcml:66
+msgid "cioppino.twothumbs (uninstall for Plone 4)"
+msgstr ""
+
+#: ./configure.zcml:75
+msgid "cioppino.twothumbs (uninstall for Plone 5)"
+msgstr ""
+
+#: ./configure.zcml:31
+msgid "cioppino.twothumbs base profile"
+msgstr ""
+
+#: ./configure.zcml:57
+msgid "cioppino.twothumbs uninstall base profile"
+msgstr ""
