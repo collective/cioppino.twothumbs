@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.0 (unreleased)
+2.2.0 (2019-10-09)
 ------------------
 
 - Register collection criterions for our positive ratings field.
