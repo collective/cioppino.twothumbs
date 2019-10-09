@@ -16,3 +16,11 @@ $I18NDUDE rebuild-pot --pot locales/${PRODUCTNAME}.pot --create ${I18NDOMAIN} .
 for po in locales/*/LC_MESSAGES/${PRODUCTNAME}.po; do
     $I18NDUDE sync --pot locales/${PRODUCTNAME}.pot $po
 done
+
+# Same for the plone domain
+$I18NDUDE rebuild-pot --pot locales/plone.pot --create plone profiles
+
+# Synchronise the resulting .pot with all .po files.
+for po in locales/*/LC_MESSAGES/plone.po; do
+    $I18NDUDE sync --pot locales/plone.pot $po
+done
