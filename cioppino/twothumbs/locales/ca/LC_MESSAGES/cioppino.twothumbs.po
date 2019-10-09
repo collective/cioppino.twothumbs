@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2019-10-09 13:21+0000\n"
+"POT-Creation-Date: 2019-10-09 13:39+0000\n"
 "PO-Revision-Date: 2011-08-25 08:35-0300\n"
 "Last-Translator: Marc Pàmpols <mpampols@gmail.com>\n"
 "Language-Team: Catalan\n"

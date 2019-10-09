@@ -18,7 +18,7 @@ for po in locales/*/LC_MESSAGES/${PRODUCTNAME}.po; do
 done
 
 # Same for the plone domain
-$I18NDUDE rebuild-pot --pot locales/plone.pot --create plone profiles
+$I18NDUDE rebuild-pot --pot locales/plone.pot --merge locales/plone-custom.pot --create plone profiles
 
 # Synchronise the resulting .pot with all .po files.
 for po in locales/*/LC_MESSAGES/plone.po; do
