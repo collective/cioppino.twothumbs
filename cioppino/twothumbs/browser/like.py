@@ -118,7 +118,7 @@ class LikeThisShizzleView(BrowserView):
         if td:
             return td.translate
 
-        def nulltranslate(msgid, target_language=None):
+        def nulltranslate(msgid, *args, **kwargs):
             """Workaround for non-registered translation domain
             to prevent breaking
             """

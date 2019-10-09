@@ -4,7 +4,9 @@ Changelog
 2.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed error: nulltranslate has no "context" argument.
+  Fixes `issue 24 <https://github.com/collective/cioppino.twothumbs/issues/24>`_.
+  [maurits]
 
 
 2.1.2 (2019-01-05)
@@ -12,6 +14,7 @@ Changelog
 
 - Fix like/dislike inline popup text translations for composed language domains like nl-be.
   [fredvd]
+
 - Prepare for Python 2 / 3 compatibility [Andreas Mantke]
 
 
