@@ -74,6 +74,17 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:upgradeSteps
+      source="1000"
+      destination="1001"
+      profile="cioppino.twothumbs:default">
+      <genericsetup:upgradeDepends
+          title="Register positive ratings criterion for collections"
+          import_profile="cioppino.twothumbs:install-base"
+          import_steps="plone.app.registry"
+          />
+  </genericsetup:upgradeSteps>
+
   <utility factory=".setuphandlers.HiddenProfiles" name="cioppino.twothumbs" />
   <utility factory=".setuphandlers.HiddenProducts" name="cioppino.twothumbs" />
 

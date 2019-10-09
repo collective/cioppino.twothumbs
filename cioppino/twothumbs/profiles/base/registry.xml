@@ -1,0 +1,15 @@
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="plone">
+    <records interface="plone.app.querystring.interfaces.IQueryField"
+             prefix="plone.app.querystring.field.positive_ratings">
+        <value key="title" i18n:translate="">Positive ratings</value>
+        <value key="enabled">True</value>
+        <value key="sortable">True</value>
+        <value key="operations">
+            <element>plone.app.querystring.operation.int.is</element>
+            <element>plone.app.querystring.operation.int.lessThan</element>
+            <element>plone.app.querystring.operation.int.largerThan</element>
+        </value>
+       <value key="group" i18n:translate="">Metadata</value>
+    </records>
+</registry>
