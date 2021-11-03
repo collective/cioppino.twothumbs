@@ -1,11 +1,14 @@
 from BTrees.OIBTree import OIBTree
+from cioppino.twothumbs.event import DislikeEvent
+from cioppino.twothumbs.event import LikeEvent
+from cioppino.twothumbs.event import UndislikeEvent
+from cioppino.twothumbs.event import UnlikeEvent
+from plone.protect.interfaces import IDisableCSRFProtection
 from Products.CMFCore.utils import getToolByName
 from zope import event
 from zope.annotation.interfaces import IAnnotations
-from .event import DislikeEvent
-from .event import LikeEvent
-from .event import UndislikeEvent
-from .event import UnlikeEvent
+from zope.globalrequest import getRequest
+from zope.interface.declarations import alsoProvides
 
 
 # The name of the annotation fields, namespaces so
@@ -21,12 +24,18 @@ def setupAnnotations(context):
     this has already been set up
     """
     annotations = IAnnotations(context)
-
+    changed = False
     if yays not in annotations:
         annotations[yays] = OIBTree()
+        changed = True
 
     if nays not in annotations:
         annotations[nays] = OIBTree()
+        changed = True
+
+    if changed:
+        request = getRequest()
+        alsoProvides(request, IDisableCSRFProtection)
 
     return annotations
 
