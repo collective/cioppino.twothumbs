@@ -18,6 +18,7 @@
 
   <plone:behavior
     title="Content Ratings (cioppino.twothumbs)"
+    name="cioppino.twothumbs"
     description="Adds the ability to rate content based on facebook-like thumbs."
     provides="cioppino.twothumbs.interfaces.ILoveThumbsDontYou"
     />
