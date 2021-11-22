@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.1 (unreleased)
+2.2.1 (2021-11-22)
 ------------------
 
 - Add name to behavior.
