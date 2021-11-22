@@ -4,8 +4,12 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add name to behavior.
+  [pbauer]
 
+- Prevent csrf-confirmation when initializing annotations.
+  [pbauer]
+  
 
 2.2.0 (2019-10-09)
 ------------------
