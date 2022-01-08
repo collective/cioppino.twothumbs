@@ -4,7 +4,8 @@ Changelog
 2.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Import IObjectEvent and ObjectEvent from zope.interface.interfaces
+  [andreasma]
 
 
 2.2.1 (2021-11-22)
