@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.2 (unreleased)
+2.2.2 (2022-03-21)
 ------------------
 
 - Import IObjectEvent and ObjectEvent from zope.interface.interfaces
