@@ -6,6 +6,12 @@ Changelog
 
 - Import IObjectEvent and ObjectEvent from zope.interface.interfaces
   [andreasma]
+- Change buildout scripts (buildout.cfg, base.cfg) and add new file
+  constraints_plone52.txt and new buildout script test_plone-5.2.x.cfg
+  [andreasma]
+- Add lib64 to .gitignore [andreasma]
+- Update requirements.txt to use constraints_plone52.txt [andreasma]
+- Fix import exception in like.py and flake8 fix in testing.py [andreasma]
 
 
 2.2.1 (2021-11-22)
