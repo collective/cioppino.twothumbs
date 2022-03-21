@@ -21,6 +21,7 @@ class TwoThumbs(PloneSandboxLayer):
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'cioppino.twothumbs:default')
 
+
 TWOTHUMBS_FIXTURE = TwoThumbs()
 TWOTHUMBS_INTEGRATION_TESTING = IntegrationTesting(
     bases=(TWOTHUMBS_FIXTURE,),
