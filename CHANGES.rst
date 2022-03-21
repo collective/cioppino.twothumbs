@@ -12,6 +12,7 @@ Changelog
 - Add lib64 to .gitignore [andreasma]
 - Update requirements.txt to use constraints_plone52.txt [andreasma]
 - Fix import exception in like.py and flake8 fix in testing.py [andreasma]
+- Update Manifest.in [andreasma]
 
 
 2.2.1 (2021-11-22)
