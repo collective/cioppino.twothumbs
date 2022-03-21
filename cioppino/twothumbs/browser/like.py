@@ -1,6 +1,6 @@
 try:
     import json
-except:
+except ImportError:
     # fallback to simplejson for pre python2.6
     import simplejson as json
 from Products.Five.browser import BrowserView
