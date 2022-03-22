@@ -43,9 +43,6 @@ jobs:
       - name: code analysis
         run: bin/code-analysis
 
-      # build sphinx
-      - name: sphinx
-        run: if [ "${{ matrix.plone-version }}" == "5.2" ] && [ ${{ matrix.python-version }} == '3.7' ]; then bin/sphinxbuilder; fi
 
       # test
       - name: test
