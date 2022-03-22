@@ -13,6 +13,7 @@ Changelog
 - Update requirements.txt to use constraints_plone52.txt [andreasma]
 - Fix import exception in like.py and flake8 fix in testing.py [andreasma]
 - Update Manifest.in [andreasma]
+- Add Github actions workflow with tests [andreasma]
 
 
 2.2.1 (2021-11-22)
