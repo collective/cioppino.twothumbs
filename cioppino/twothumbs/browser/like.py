@@ -68,7 +68,8 @@ class LikeThisShizzleView(BrowserView):
     def __call__(self, REQUEST, RESPONSE):
         registry = getUtility(IRegistry)
         anonuid = None
-        anonymous_voting = registry.get('cioppino.twothumbs.anonymousvoting', False)
+        anonymous_voting = registry.get(
+            'cioppino.twothumbs.anonymousvoting', False)
         portal_state = getMultiAdapter((self.context, self.request),
                                        name='plone_portal_state')
 
@@ -76,7 +77,7 @@ class LikeThisShizzleView(BrowserView):
             if not anonymous_voting:
                 return RESPONSE.redirect('%s/login?came_from=%s' %
                                          (portal_state.portal_url(),
-                                          REQUEST['HTTP_REFERER'])
+                                          REQUEST['HTTP_REFERER']),
                                          )
             else:
                 anonuid = self.request.cookies.get(COOKIENAME, None)
@@ -92,7 +93,7 @@ class LikeThisShizzleView(BrowserView):
             action = rate.hateIt(self.context, userid=anonuid)
         else:
             return _(u"We don't like ambiguity around here. Check yo self "
-                     "before you wreck yo self.")
+                     'before you wreck yo self.')
 
         if not form.get('ajax', False):
             return RESPONSE.redirect(REQUEST['HTTP_REFERER'])
@@ -105,11 +106,11 @@ class LikeThisShizzleView(BrowserView):
 
             tally['msg'] = translate(
                 self._getMessage(action),
-                context=self.request
+                context=self.request,
             )
             tally['close'] = translate(
-                _(u"Close"),
-                context=self.request
+                _(u'Close'),
+                context=self.request,
             )
 
             RESPONSE.setHeader('Content-Type',
@@ -129,8 +130,8 @@ class LikeThisShizzleView(BrowserView):
 
     def _getMessage(self, action):
         if (action == 'like'):
-            return _(u"You liked this. Thanks for the feedback!")
+            return _(u'You liked this. Thanks for the feedback!')
         elif (action == 'dislike'):
-            return _(u"You dislike this. Thanks for the feedback!")
+            return _(u'You dislike this. Thanks for the feedback!')
         elif (action == 'undo'):
-            return _(u"Your vote has been removed.")
+            return _(u'Your vote has been removed.')
