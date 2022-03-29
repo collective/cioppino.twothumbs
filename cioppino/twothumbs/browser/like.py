@@ -6,6 +6,7 @@ except ImportError:
     import simplejson as json
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 from plone.registry.interfaces import IRegistry

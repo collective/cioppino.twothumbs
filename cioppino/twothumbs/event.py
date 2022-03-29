@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+from zope.interface import implementer
 from zope.interface.interfaces import IObjectEvent
 from zope.interface.interfaces import ObjectEvent
-from zope.interface import implementer
 
 
 class ILikeEvent(IObjectEvent):
