@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from BTrees.OIBTree import OIBTree
 from cioppino.twothumbs.event import DislikeEvent
 from cioppino.twothumbs.event import LikeEvent
