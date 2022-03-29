@@ -4,6 +4,7 @@ from cioppino.twothumbs.event import DislikeEvent
 from cioppino.twothumbs.event import LikeEvent
 from cioppino.twothumbs.event import UndislikeEvent
 from cioppino.twothumbs.event import UnlikeEvent
+from plone import api
 from plone.protect.interfaces import IDisableCSRFProtection
 from Products.CMFCore.utils import getToolByName
 from zope import event
@@ -52,7 +53,7 @@ def loveIt(context, userid=None):
     action = None
 
     if not userid:
-        mtool = getToolByName(context, 'portal_membership')
+        mtool = api.portal.get_tool(context, 'portal_membership')
         if mtool.isAnonymousUser():
             raise ValueError('userid must be passed activly for anon users')
         userid = mtool.getAuthenticatedMember().id
