@@ -82,7 +82,7 @@ def hateIt(context, userid=None):
     action = None
 
     if not userid:
-        mtool = getToolByName(context, 'portal_membership')
+        mtool = api.portal.get_tool(context, 'portal_membership')
         userid = mtool.getAuthenticatedMember().id
 
     if userid in annotations[yays]:
@@ -124,7 +124,7 @@ def getMyVote(context, userid=None):
     annotations = IAnnotations(context)
 
     if not userid:
-        mtool = getToolByName(context, 'portal_membership')
+        mtool = api.portal.get_tool(context, 'portal_membership')
         userid = mtool.getAuthenticatedMember().id
 
     if userid in annotations[yays]:
