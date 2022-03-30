@@ -52,11 +52,9 @@ def loveIt(context, userid=None):
     action = None
 
     if not userid:
-        mtool = api.portal.get_tool('portal_membership')
         if api.user.is_anonymous():
             raise ValueError('userid must be passed activly for anon users')
         userid = api.user.get_current().id
-        print('USERID: ', userid)
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
 
@@ -82,7 +80,6 @@ def hateIt(context, userid=None):
     action = None
 
     if not userid:
-        mtool = api.portal.get_tool('portal_membership')
         userid = api.user.get_current().id
 
     if userid in annotations[yays]:
@@ -124,7 +121,6 @@ def getMyVote(context, userid=None):
     annotations = IAnnotations(context)
 
     if not userid:
-        mtool = api.portal.get_tool('portal_membership')
         userid = api.user.get_current().id
 
     if userid in annotations[yays]:
