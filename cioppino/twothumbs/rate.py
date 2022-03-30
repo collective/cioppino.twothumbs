@@ -53,7 +53,7 @@ def loveIt(context, userid=None):
 
     if not userid:
         mtool = api.portal.get_tool(context, 'portal_membership')
-        if mtool.isAnonymousUser():
+        if api.user.is_anonymous():
             raise ValueError('userid must be passed activly for anon users')
         userid = api.user.get_current().id
     if userid in annotations[nays]:
