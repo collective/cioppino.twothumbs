@@ -3,6 +3,7 @@
 *.pyc
 .installed.cfg
 .mr.developer.cfg
+development.cfg
 /bin/
 /develop-eggs/
 /dist/
