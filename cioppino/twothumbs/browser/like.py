@@ -4,17 +4,18 @@ try:
 except ImportError:
     # fallback to simplejson for pre python2.6
     import simplejson as json
-from Products.Five.browser import BrowserView
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 from plone.registry.interfaces import IRegistry
+from Products.Five.browser import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from uuid import uuid4
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.component import queryUtility
 from zope.i18n.interfaces import ITranslationDomain
-from uuid import uuid4
+
 
 COOKIENAME = 'yolikeitorhateit'
 
@@ -76,9 +77,9 @@ class LikeThisShizzleView(BrowserView):
 
         if portal_state.anonymous():
             if not anonymous_voting:
-                return RESPONSE.redirect('%s/login?came_from=%s' %
+                return RESPONSE.redirect('{0}/login?came_from={0}'.format(
                                          (portal_state.portal_url(),
-                                          REQUEST['HTTP_REFERER']),
+                                          REQUEST['HTTP_REFERER'])),
                                          )
             else:
                 anonuid = self.request.cookies.get(COOKIENAME, None)
