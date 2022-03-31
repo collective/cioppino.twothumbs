@@ -4,7 +4,13 @@ Changelog
 2.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Flake8 and isort fixes [andreasma]
+- Add buildout scripts for Plone 5.2 and Plone 6.0 and
+  add them to the Github actions test matrix (instead of
+  former test_plone.5.2.x buildout file [andreasma]
+- Use plone.api for user actions [andreasma]
+- Remove Travis configuration / buildout file [andreasma]
+- Update localization files [andreasma]
 
 
 2.2.2 (2022-03-21)
