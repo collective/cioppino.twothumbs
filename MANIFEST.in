@@ -7,5 +7,6 @@ global-exclude *pyc .gitignore
 prune dist
 exclude *.cfg
 exclude .coveragerc
+exclude .flake8
 exclude requirements.txt
 exclude bootstrap.py
