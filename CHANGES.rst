@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.3 (unreleased)
+2.2.3 (2022-03-31)
 ------------------
 
 - Flake8 and isort fixes [andreasma]
