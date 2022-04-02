@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.4 (unreleased)
+2.2.4 (2022-04-02)
 ------------------
 
 - Fix registry uninstall profile for Plone 5 [andreasma]
