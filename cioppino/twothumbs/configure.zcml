@@ -49,16 +49,6 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-
-  <genericsetup:registerProfile
-      zcml:condition="have plone-6"
-      name="default"
-      title="cioppino.twothumbs"
-      directory="profiles/plone6"
-      description="Installs the cioppino.twothumbs add-on Plone6 specific configuration"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
   <genericsetup:registerProfile
       name="uninstall-base"
       title="cioppino.twothumbs uninstall base profile"
@@ -82,16 +72,6 @@
       title="cioppino.twothumbs (uninstall for Plone 5)"
       directory="profiles/uninstall-plone5"
       description="Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-
-  <genericsetup:registerProfile
-      zcml:condition="have plone-6"
-      name="uninstall"
-      title="cioppino.twothumbs (uninstall for Plone 6)"
-      directory="profiles/uninstall-plone6"
-      description="Uninstalls the cioppino.twothumbs add-on Plone6 specific configuration"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
