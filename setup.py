@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-import os
+
 
 version = '2.2.5.dev0'
 description = open("README.rst").read() + "\n"
