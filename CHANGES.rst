@@ -4,7 +4,9 @@ Changelog
 2.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix mismatch between upgrade step and metadata version.
+  Fixes `issue 31 <https://github.com/collective/cioppino.twothumbs/issues/31>`_.
+  [maurits]
 
 
 2.2.1 (2021-11-22)
@@ -15,7 +17,7 @@ Changelog
 
 - Prevent csrf-confirmation when initializing annotations.
   [pbauer]
-  
+
 
 2.2.0 (2019-10-09)
 ------------------
