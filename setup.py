@@ -2,8 +2,10 @@ from setuptools import setup, find_packages
 
 
 version = '2.2.5.dev0'
-description = open("README.rst").read() + "\n"
-description += open("CHANGES.rst").read()
+with open("README.rst") as myfile:
+    description = myfile.read() + "\n"
+with open("CHANGES.rst") as myfile:
+    description += myfile.read()
 
 setup(
     name='cioppino.twothumbs',
