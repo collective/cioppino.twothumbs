@@ -48,7 +48,7 @@ Changelog
 
 - Prevent csrf-confirmation when initializing annotations.
   [pbauer]
-  
+
 
 2.2.0 (2019-10-09)
 ------------------
