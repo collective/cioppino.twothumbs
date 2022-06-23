@@ -84,6 +84,12 @@
           import_profile="cioppino.twothumbs:install-base"
           import_steps="plone.app.registry"
           />
+      <genericsetup:upgradeDepends
+          zcml:condition="have plone-5"
+          title="Update Plone 5 resource registry"
+          import_profile="cioppino.twothumbs:default"
+          import_steps="plone.app.registry"
+          />
   </genericsetup:upgradeSteps>
 
   <utility factory=".setuphandlers.HiddenProfiles" name="cioppino.twothumbs" />
