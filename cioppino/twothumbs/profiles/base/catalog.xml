@@ -2,6 +2,6 @@
 <object name="portal_catalog" meta_type="Plone Catalog Tool">
     <index name="positive_ratings" meta_type="FieldIndex">
         <indexed_attr value="positive_ratings"/>
-    </index> 
+    </index>
     <column value="positive_ratings"/>
 </object>

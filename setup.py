@@ -1,9 +1,11 @@
 from setuptools import setup, find_packages
-import os
+
 
 version = '2.2.5.dev0'
-description = open("README.rst").read() + "\n"
-description += open("CHANGES.rst").read()
+with open("README.rst") as myfile:
+    description = myfile.read() + "\n"
+with open("CHANGES.rst") as myfile:
+    description += myfile.read()
 
 setup(
     name='cioppino.twothumbs',
@@ -16,6 +18,7 @@ setup(
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: 5.2",
+        "Framework :: Plone :: 6.0",
         "Framework :: Plone :: Core",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",

@@ -9,9 +9,6 @@ their vote at any time)
 Installation
 ------------
 
-.. image:: https://secure.travis-ci.org/collective/cioppino.twothumbs.png
-    :target: http://travis-ci.org/#!/collective/cioppino.twothumbs
-
 .. image:: https://coveralls.io/repos/collective/cioppino.twothumbs/badge.png?branch=master
     :alt: Coverage
     :target: https://coveralls.io/r/collective/cioppino.twothumbs
