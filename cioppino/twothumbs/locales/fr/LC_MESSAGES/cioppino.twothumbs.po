@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-03-31 09:09+0000\n"
+"POT-Creation-Date: 2022-08-08 15:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <plone-fr@lists.plone.org>\n"
@@ -25,7 +25,7 @@ msgstr "${login} pour noter ${close-link}"
 msgid "Adds the ability to rate content based on facebook-like thumbs."
 msgstr ""
 
-#: ./browser/like.py:114
+#: ./browser/like.py:109
 #: ./browser/templates/login_to_rate.pt:18
 msgid "Close"
 msgstr "Fermer"
@@ -42,11 +42,7 @@ msgstr "Je n'aime pas (cliquer de nouveau pour annuler)"
 msgid "I like this (click again to undo)"
 msgstr "J'aime (cliquer de nouveau pour annuler)"
 
-#: ./configure.zcml:41
-msgid "Installs the cioppino.twothumbs add-on Plone4 specific configuration"
-msgstr ""
-
-#: ./configure.zcml:50
+#: ./configure.zcml:40
 msgid "Installs the cioppino.twothumbs add-on Plone5 specific configuration"
 msgstr ""
 
@@ -58,19 +54,19 @@ msgstr "Aimer"
 msgid "Log in"
 msgstr "Se connecter"
 
-#: ./configure.zcml:110
+#: ./configure.zcml:95
 msgid "Object disliked"
 msgstr ""
 
-#: ./configure.zcml:98
+#: ./configure.zcml:83
 msgid "Object liked"
 msgstr ""
 
-#: ./configure.zcml:116
+#: ./configure.zcml:101
 msgid "Object undisliked"
 msgstr ""
 
-#: ./configure.zcml:104
+#: ./configure.zcml:89
 msgid "Object unliked"
 msgstr ""
 
@@ -78,7 +74,7 @@ msgstr ""
 msgid "The cioppino.twothumbs package base profile."
 msgstr ""
 
-#: ./configure.zcml:58
+#: ./configure.zcml:48
 msgid "The cioppino.twothumbs package uninstall base profile."
 msgstr ""
 
@@ -86,39 +82,31 @@ msgstr ""
 msgid "Ugh"
 msgstr "Pouah"
 
-#: ./configure.zcml:67
-msgid "Uninstalls the cioppino.twothumbs add-on Plone4 specific configuration"
-msgstr ""
-
-#: ./configure.zcml:76
+#: ./configure.zcml:56
 msgid "Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
 msgstr ""
 
-#: ./browser/like.py:97
+#: ./browser/like.py:92
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
 msgstr "N'ou n'aimont pas l'ambiguité par ici. Vérifier avant de jeter la pierre."
 
-#: ./browser/like.py:137
+#: ./browser/like.py:132
 msgid "You dislike this. Thanks for the feedback!"
 msgstr "Vous n'aimez pas. Merci de votre retour !"
 
-#: ./browser/like.py:135
+#: ./browser/like.py:130
 msgid "You liked this. Thanks for the feedback!"
 msgstr "Vous aimez. Merci de votre retour !"
 
-#: ./browser/like.py:139
+#: ./browser/like.py:134
 msgid "Your vote has been removed."
 msgstr "Votre vote a été supprimé."
 
-#: ./configure.zcml:41
+#: ./configure.zcml:40
 msgid "cioppino.twothumbs"
 msgstr ""
 
-#: ./configure.zcml:67
-msgid "cioppino.twothumbs (uninstall for Plone 4)"
-msgstr ""
-
-#: ./configure.zcml:76
+#: ./configure.zcml:56
 msgid "cioppino.twothumbs (uninstall for Plone 5)"
 msgstr ""
 
@@ -126,6 +114,6 @@ msgstr ""
 msgid "cioppino.twothumbs base profile"
 msgstr ""
 
-#: ./configure.zcml:58
+#: ./configure.zcml:48
 msgid "cioppino.twothumbs uninstall base profile"
 msgstr ""

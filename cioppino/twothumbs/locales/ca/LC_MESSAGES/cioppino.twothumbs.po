@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2019-10-09 13:39+0000\n"
+"POT-Creation-Date: 2022-08-08 15:14+0000\n"
 "PO-Revision-Date: 2011-08-25 08:35-0300\n"
 "Last-Translator: Marc Pàmpols <mpampols@gmail.com>\n"
 "Language-Team: Catalan\n"
@@ -20,16 +20,16 @@ msgstr ""
 msgid "${login} to rate ${close-link}"
 msgstr "${login} per a qualificar ${close-link}"
 
-#: ./configure.zcml:23
+#: ./configure.zcml:24
 msgid "Adds the ability to rate content based on facebook-like thumbs."
 msgstr ""
 
-#: ./browser/like.py:104
+#: ./browser/like.py:109
 #: ./browser/templates/login_to_rate.pt:18
 msgid "Close"
 msgstr "Tancar"
 
-#: ./configure.zcml:23
+#: ./configure.zcml:24
 msgid "Content Ratings (cioppino.twothumbs)"
 msgstr ""
 
@@ -42,10 +42,6 @@ msgid "I like this (click again to undo)"
 msgstr "M'agrada (torna a clicar per a desfer)"
 
 #: ./configure.zcml:40
-msgid "Installs the cioppino.twothumbs add-on Plone4 specific configuration"
-msgstr ""
-
-#: ./configure.zcml:49
 msgid "Installs the cioppino.twothumbs add-on Plone5 specific configuration"
 msgstr ""
 
@@ -57,27 +53,27 @@ msgstr "M'agrada"
 msgid "Log in"
 msgstr "Entra"
 
-#: ./configure.zcml:109
+#: ./configure.zcml:95
 msgid "Object disliked"
 msgstr ""
 
-#: ./configure.zcml:97
+#: ./configure.zcml:83
 msgid "Object liked"
 msgstr ""
 
-#: ./configure.zcml:115
+#: ./configure.zcml:101
 msgid "Object undisliked"
 msgstr ""
 
-#: ./configure.zcml:103
+#: ./configure.zcml:89
 msgid "Object unliked"
 msgstr ""
 
-#: ./configure.zcml:31
+#: ./configure.zcml:32
 msgid "The cioppino.twothumbs package base profile."
 msgstr ""
 
-#: ./configure.zcml:57
+#: ./configure.zcml:48
 msgid "The cioppino.twothumbs package uninstall base profile."
 msgstr ""
 
@@ -85,27 +81,23 @@ msgstr ""
 msgid "Ugh"
 msgstr "No m'agrada"
 
-#: ./configure.zcml:66
-msgid "Uninstalls the cioppino.twothumbs add-on Plone4 specific configuration"
-msgstr ""
-
-#: ./configure.zcml:75
+#: ./configure.zcml:56
 msgid "Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
 msgstr ""
 
-#: ./browser/like.py:87
+#: ./browser/like.py:92
 msgid "We don't like ambiguity around here. Check yo self before you wreck yo self."
 msgstr "No ens agrada l'ambigüitat per aquí. Revisi el seu acte abans d'arruïnar-ho."
 
-#: ./browser/like.py:133
+#: ./browser/like.py:132
 msgid "You dislike this. Thanks for the feedback!"
 msgstr "No t'ha agradat. Gràcies pels comentaris!"
 
-#: ./browser/like.py:131
+#: ./browser/like.py:130
 msgid "You liked this. Thanks for the feedback!"
 msgstr "T'ha agradat. Gràcies pels comentaris!"
 
-#: ./browser/like.py:135
+#: ./browser/like.py:134
 msgid "Your vote has been removed."
 msgstr "El seu vot ha estat eliminat."
 
@@ -113,18 +105,14 @@ msgstr "El seu vot ha estat eliminat."
 msgid "cioppino.twothumbs"
 msgstr ""
 
-#: ./configure.zcml:66
-msgid "cioppino.twothumbs (uninstall for Plone 4)"
-msgstr ""
-
-#: ./configure.zcml:75
+#: ./configure.zcml:56
 msgid "cioppino.twothumbs (uninstall for Plone 5)"
 msgstr ""
 
-#: ./configure.zcml:31
+#: ./configure.zcml:32
 msgid "cioppino.twothumbs base profile"
 msgstr ""
 
-#: ./configure.zcml:57
+#: ./configure.zcml:48
 msgid "cioppino.twothumbs uninstall base profile"
 msgstr ""
