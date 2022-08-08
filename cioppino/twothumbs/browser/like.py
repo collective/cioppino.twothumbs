@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 from plone.registry.interfaces import IRegistry
