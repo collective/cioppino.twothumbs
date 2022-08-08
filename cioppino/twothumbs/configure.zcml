@@ -32,16 +32,6 @@
       />
 
   <genericsetup:registerProfile
-      zcml:condition="not-have plone-5"
-      name="default"
-      title="cioppino.twothumbs"
-      directory="profiles/plone4"
-      description="Installs the cioppino.twothumbs add-on Plone4 specific configuration"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <genericsetup:registerProfile
-      zcml:condition="have plone-5"
       name="default"
       title="cioppino.twothumbs"
       directory="profiles/plone5"
@@ -58,16 +48,6 @@
       />
 
   <genericsetup:registerProfile
-      zcml:condition="not-have plone-5"
-      name="uninstall"
-      title="cioppino.twothumbs (uninstall for Plone 4)"
-      directory="profiles/uninstall-plone4"
-      description="Uninstalls the cioppino.twothumbs add-on Plone4 specific configuration"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <genericsetup:registerProfile
-      zcml:condition="have plone-5"
       name="uninstall"
       title="cioppino.twothumbs (uninstall for Plone 5)"
       directory="profiles/uninstall-plone5"
@@ -85,7 +65,6 @@
           import_steps="plone.app.registry"
           />
       <genericsetup:upgradeDepends
-          zcml:condition="have plone-5"
           title="Update Plone 5 resource registry"
           import_profile="cioppino.twothumbs:default"
           import_steps="plone.app.registry"
