@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-try:
-    import json
-except ImportError:
-    # fallback to simplejson for pre python2.6
-    import simplejson as json
-
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 from plone.registry.interfaces import IRegistry
@@ -15,6 +8,8 @@ from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.component import queryUtility
 from zope.i18n.interfaces import ITranslationDomain
+
+import json
 
 
 COOKIENAME = 'yolikeitorhateit'
