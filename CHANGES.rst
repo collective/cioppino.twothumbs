@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.2 (unreleased)
+2.2.5 (2022-08-08)
 ------------------
 
 - Fix mismatch between upgrade step and metadata version.
