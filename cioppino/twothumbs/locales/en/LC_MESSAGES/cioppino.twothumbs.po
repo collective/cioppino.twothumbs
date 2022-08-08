@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-08-08 15:14+0000\n"
+"POT-Creation-Date: 2022-08-08 15:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "${login} to rate ${close-link}"
 msgstr ""
 
-#: ./configure.zcml:24
+#: ./configure.zcml:39
 msgid "Adds the ability to rate content based on facebook-like thumbs."
 msgstr ""
 
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ./configure.zcml:24
+#: ./configure.zcml:23
 msgid "Content Ratings (cioppino.twothumbs)"
 msgstr ""
 
@@ -39,10 +39,6 @@ msgstr ""
 msgid "I like this (click again to undo)"
 msgstr ""
 
-#: ./configure.zcml:40
-msgid "Installs the cioppino.twothumbs add-on Plone5 specific configuration"
-msgstr ""
-
 #: ./browser/templates/thumbs.pt:22
 msgid "Like"
 msgstr ""
@@ -51,36 +47,28 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: ./configure.zcml:95
+#: ./configure.zcml:92
 msgid "Object disliked"
 msgstr ""
 
-#: ./configure.zcml:83
+#: ./configure.zcml:80
 msgid "Object liked"
 msgstr ""
 
-#: ./configure.zcml:101
+#: ./configure.zcml:98
 msgid "Object undisliked"
 msgstr ""
 
-#: ./configure.zcml:89
+#: ./configure.zcml:86
 msgid "Object unliked"
 msgstr ""
 
-#: ./configure.zcml:32
+#: ./configure.zcml:31
 msgid "The cioppino.twothumbs package base profile."
-msgstr ""
-
-#: ./configure.zcml:48
-msgid "The cioppino.twothumbs package uninstall base profile."
 msgstr ""
 
 #: ./browser/templates/thumbs.pt:32
 msgid "Ugh"
-msgstr ""
-
-#: ./configure.zcml:56
-msgid "Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
 msgstr ""
 
 #: ./browser/like.py:92
@@ -99,18 +87,18 @@ msgstr ""
 msgid "Your vote has been removed."
 msgstr ""
 
-#: ./configure.zcml:40
+#: ./configure.zcml:39
 msgid "cioppino.twothumbs"
 msgstr ""
 
-#: ./configure.zcml:56
-msgid "cioppino.twothumbs (uninstall for Plone 5)"
+#: ./configure.zcml:53
+msgid "cioppino.twothumbs (uninstall)"
 msgstr ""
 
-#: ./configure.zcml:32
+#: ./configure.zcml:31
 msgid "cioppino.twothumbs base profile"
 msgstr ""
 
-#: ./configure.zcml:48
+#: ./configure.zcml:46
 msgid "cioppino.twothumbs uninstall base profile"
 msgstr ""

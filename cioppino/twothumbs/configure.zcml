@@ -19,7 +19,6 @@
   <plone:behavior
     title="Content Ratings (cioppino.twothumbs)"
     name="cioppino.twothumbs"
-    description="Adds the ability to rate content based on facebook-like thumbs."
     provides="cioppino.twothumbs.interfaces.ILoveThumbsDontYou"
     />
 
@@ -35,7 +34,7 @@
       name="default"
       title="cioppino.twothumbs"
       directory="profiles/plone5"
-      description="Installs the cioppino.twothumbs add-on Plone5 specific configuration"
+      description="Adds the ability to rate content based on facebook-like thumbs."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
@@ -43,15 +42,13 @@
       name="uninstall-base"
       title="cioppino.twothumbs uninstall base profile"
       directory="profiles/uninstall-base"
-      description="The cioppino.twothumbs package uninstall base profile."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="cioppino.twothumbs (uninstall for Plone 5)"
+      title="cioppino.twothumbs (uninstall)"
       directory="profiles/uninstall-plone5"
-      description="Uninstalls the cioppino.twothumbs add-on Plone5 specific configuration"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
@@ -65,7 +62,7 @@
           import_steps="plone.app.registry"
           />
       <genericsetup:upgradeDepends
-          title="Update Plone 5 resource registry"
+          title="Update resource registry"
           import_profile="cioppino.twothumbs:default"
           import_steps="plone.app.registry"
           />
