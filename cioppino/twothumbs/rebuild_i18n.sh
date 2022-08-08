@@ -4,7 +4,7 @@
 # script if you have such a thing.
 
 # Edit this to wherever your i18ndude lives, or trust the path.
-I18NDUDE="../../bin/i18ndude"
+I18NDUDE="i18ndude"
 PRODUCTNAME="cioppino.twothumbs"
 I18NDOMAIN=$PRODUCTNAME
 
