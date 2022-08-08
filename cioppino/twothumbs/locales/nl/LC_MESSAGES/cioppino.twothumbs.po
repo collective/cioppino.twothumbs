@@ -24,7 +24,7 @@ msgstr "${login} om te stemmen ${close-link}"
 
 #: ./configure.zcml:39
 msgid "Adds the ability to rate content based on facebook-like thumbs."
-msgstr ""
+msgstr "Voegt de mogelijkheid to om content leuk of niet leuk te vinden."
 
 #: ./browser/like.py:109
 #: ./browser/templates/login_to_rate.pt:18
@@ -33,7 +33,7 @@ msgstr "Sluiten"
 
 #: ./configure.zcml:23
 msgid "Content Ratings (cioppino.twothumbs)"
-msgstr ""
+msgstr "Duimpje omhoog/omlaag (cioppino.twothumbs)"
 
 #: ./browser/templates/thumbs.pt:32
 msgid "I dislike this (click again to undo)"
@@ -53,23 +53,23 @@ msgstr "Aanmelden"
 
 #: ./configure.zcml:92
 msgid "Object disliked"
-msgstr ""
+msgstr "Item niet leuk gevonden"
 
 #: ./configure.zcml:80
 msgid "Object liked"
-msgstr ""
+msgstr "Item leuk gevonden"
 
 #: ./configure.zcml:98
 msgid "Object undisliked"
-msgstr ""
+msgstr "Item niet leuk vinden ongedaan gemaakt"
 
 #: ./configure.zcml:86
 msgid "Object unliked"
-msgstr ""
+msgstr "Item leuk vinden ongedaan gemaakt"
 
 #: ./configure.zcml:31
 msgid "The cioppino.twothumbs package base profile."
-msgstr ""
+msgstr "Het cioppino.twothumbs basisprofiel."
 
 #: ./browser/templates/thumbs.pt:32
 msgid "Ugh"
@@ -93,16 +93,16 @@ msgstr "Uw feedback is verwijderd."
 
 #: ./configure.zcml:39
 msgid "cioppino.twothumbs"
-msgstr ""
+msgstr "cioppino.twothumbs"
 
 #: ./configure.zcml:53
 msgid "cioppino.twothumbs (uninstall)"
-msgstr ""
+msgstr "cioppino.twothumbs (uninstall)"
 
 #: ./configure.zcml:31
 msgid "cioppino.twothumbs base profile"
-msgstr ""
+msgstr "cioppino.twothumbs basisprofiel"
 
 #: ./configure.zcml:46
 msgid "cioppino.twothumbs uninstall base profile"
-msgstr ""
+msgstr "cioppino.twothumbs uninstall basisprofiel"
