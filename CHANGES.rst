@@ -8,6 +8,13 @@ Changelog
   Fixes `issue 31 <https://github.com/collective/cioppino.twothumbs/issues/31>`_.
   [maurits]
 
+- Create branch 2.x on which I revert changes made after 2.2.1.
+  This restores compatibility with Plone 5.2 on Python 2.7.
+  Also Plone 4.3, 5.0 and 5.1 should still work.
+  The master branch will be for Plone 5.2 and 6.0 on Python 3.
+  See `issue 35 <https://github.com/collective/cioppino.twothumbs/issues/35>`_.
+  [maurits]
+
 
 2.2.1 (2021-11-22)
 ------------------
