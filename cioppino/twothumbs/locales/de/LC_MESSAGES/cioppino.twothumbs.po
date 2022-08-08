@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2022-08-08 15:19+0000\n"
+"POT-Creation-Date: 2022-08-08 15:26+0000\n"
 "PO-Revision-Date: 2012-05-15 12:56+0200\n"
 "Last-Translator: iJens W. Klein <ijens@bluedynamics.com>\n"
 "Language-Team: German\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "${login} to rate ${close-link}"
 msgstr "${login} zum Abstimmen ${close-link}"
 
-#: ./configure.zcml:39
+#: ./configure.zcml:38
 msgid "Adds the ability to rate content based on facebook-like thumbs."
 msgstr ""
 
@@ -49,24 +49,20 @@ msgstr "Gefällt mir"
 msgid "Log in"
 msgstr "Einloggen"
 
-#: ./configure.zcml:92
+#: ./configure.zcml:91
 msgid "Object disliked"
 msgstr ""
 
-#: ./configure.zcml:80
+#: ./configure.zcml:79
 msgid "Object liked"
 msgstr ""
 
-#: ./configure.zcml:98
+#: ./configure.zcml:97
 msgid "Object undisliked"
 msgstr ""
 
-#: ./configure.zcml:86
+#: ./configure.zcml:85
 msgid "Object unliked"
-msgstr ""
-
-#: ./configure.zcml:31
-msgid "The cioppino.twothumbs package base profile."
 msgstr ""
 
 #: ./browser/templates/thumbs.pt:32
@@ -89,18 +85,18 @@ msgstr "Dir gefällt das. Danke für Deine Meinung."
 msgid "Your vote has been removed."
 msgstr "Deine Stimme wurde entfernt."
 
-#: ./configure.zcml:39
+#: ./configure.zcml:38
 msgid "cioppino.twothumbs"
 msgstr ""
 
-#: ./configure.zcml:53
+#: ./configure.zcml:52
 msgid "cioppino.twothumbs (uninstall)"
 msgstr ""
 
-#: ./configure.zcml:31
+#: ./configure.zcml:30
 msgid "cioppino.twothumbs base profile"
 msgstr ""
 
-#: ./configure.zcml:46
+#: ./configure.zcml:45
 msgid "cioppino.twothumbs uninstall base profile"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2022-08-08 15:19+0000\n"
+"POT-Creation-Date: 2022-08-08 15:26+0000\n"
 "PO-Revision-Date: 2012-05-15 12:56+0200\n"
 "Last-Translator: Fred van Dijk <f.vandijk@zestsoftware.nl>\n"
 "Language-Team: Dutch\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "${login} to rate ${close-link}"
 msgstr "${login} om te stemmen ${close-link}"
 
-#: ./configure.zcml:39
+#: ./configure.zcml:38
 msgid "Adds the ability to rate content based on facebook-like thumbs."
 msgstr "Voegt de mogelijkheid to om content leuk of niet leuk te vinden."
 
@@ -51,25 +51,21 @@ msgstr "Is leuk"
 msgid "Log in"
 msgstr "Aanmelden"
 
-#: ./configure.zcml:92
+#: ./configure.zcml:91
 msgid "Object disliked"
 msgstr "Item niet leuk gevonden"
 
-#: ./configure.zcml:80
+#: ./configure.zcml:79
 msgid "Object liked"
 msgstr "Item leuk gevonden"
 
-#: ./configure.zcml:98
+#: ./configure.zcml:97
 msgid "Object undisliked"
 msgstr "Item niet leuk vinden ongedaan gemaakt"
 
-#: ./configure.zcml:86
+#: ./configure.zcml:85
 msgid "Object unliked"
 msgstr "Item leuk vinden ongedaan gemaakt"
-
-#: ./configure.zcml:31
-msgid "The cioppino.twothumbs package base profile."
-msgstr "Het cioppino.twothumbs basisprofiel."
 
 #: ./browser/templates/thumbs.pt:32
 msgid "Ugh"
@@ -91,18 +87,18 @@ msgstr "Dit is leuk/interessant. Bedankt voor uw feedback!"
 msgid "Your vote has been removed."
 msgstr "Uw feedback is verwijderd."
 
-#: ./configure.zcml:39
+#: ./configure.zcml:38
 msgid "cioppino.twothumbs"
 msgstr "cioppino.twothumbs"
 
-#: ./configure.zcml:53
+#: ./configure.zcml:52
 msgid "cioppino.twothumbs (uninstall)"
 msgstr "cioppino.twothumbs (uninstall)"
 
-#: ./configure.zcml:31
+#: ./configure.zcml:30
 msgid "cioppino.twothumbs base profile"
 msgstr "cioppino.twothumbs basisprofiel"
 
-#: ./configure.zcml:46
+#: ./configure.zcml:45
 msgid "cioppino.twothumbs uninstall base profile"
 msgstr "cioppino.twothumbs uninstall basisprofiel"

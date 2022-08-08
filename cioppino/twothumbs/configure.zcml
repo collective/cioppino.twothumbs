@@ -26,7 +26,6 @@
       name="install-base"
       title="cioppino.twothumbs base profile"
       directory="profiles/base"
-      description="The cioppino.twothumbs package base profile."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
