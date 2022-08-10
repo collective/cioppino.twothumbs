@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2.5 (unreleased)
+3.0.0 (unreleased)
 ------------------
 
 - Fix mismatch between upgrade step and metadata version.

@@ -27,33 +27,13 @@ working as expected.
 Compatibility
 -------------
 
-cioppino.twothumbs works with Plone 4.3, 5.1, 5.2.
-It works on Python 2.7, and for Plone 5.2 it also works on Python 3.6.
-Those are the versions that are automatically tested.
+cioppino.twothumbs works with Plone 5.2 and 6.0, on Python 3 only.
+For other Plone and Python versions, see the 2.x releases.
 
 
 As a Viewlet
 ------------
 
-Archetypes
-^^^^^^^^^^
-Then, in the configure.zcml
-in the base of your product you need to tell which content types should
-display the thumbs. For example, with the PloneSoftwareCenter product,
-the configure.zcml has the lines::
-
-    <include package="cioppino.twothumbs" />
-    <class class=".content.project.PSCProject">
-       <implements interface="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
-    </class>
-
-That little diddy would add the thumbs viewlet to the PSCProject
-product only. You only need to include the package 1 time but you
-need to add the class block for every content type you would like
-to show the thumbs.
-
-Dexterity
-^^^^^^^^^
 Cioppino.TwoThumbs provides a behavior for dexterity content types. In
 the dexterity configuration UI, it will be listed under "Behaviors".
 
@@ -62,7 +42,7 @@ to ``../path/to/profiles/default/types/your_type.xml``::
 
     ...
     <property name="behaviors">
-        <element value="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
+        <element value="cioppino.twothumbs" />
         ...
     </property>
     ...
@@ -84,11 +64,12 @@ Migration
 If you used to use plone.contentratings and want to migrate to the thumbs
 product, there is an example in PloneSoftwareCenter. It's
 pretty easy. Please see https://github.com/collective/Products.PloneSoftwareCenter/blob/master/Products/PloneSoftwareCenter/Extensions/migrateratings.py for an example.
-
+It has not been tried on Python 3 though, so maybe you need to migrate to a version supporting Python 2 first.
+But it is okay to try.
 
 Anonymous Voting
 ----------------
-Anonymous voting is possible, but **weak**. An unique identifier is
+Anonymous voting is possible, but **weak**. A unique identifier is
 generated and set as cookie on first vote. Then the uid is used as
 identifier for later display/changes. To enable anonymous voting go to
 Plones configuration registry, search for ``cioppino.twothumbs.anonymous``
@@ -102,7 +83,7 @@ your sites profile::
         </record>
     </registry>
 
-It's easy to fake anonymous votes, so dont trust them much. A todo here
+It's easy to fake anonymous votes, so don't trust them much. A todo here
 is to add a captcha, which would make automated vote-faking impossible.
 
 
