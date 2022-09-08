@@ -1,7 +1,7 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('cioppino.twothumbs')
+_ = MessageFactory("cioppino.twothumbs")
 
 
 def initialize(context):

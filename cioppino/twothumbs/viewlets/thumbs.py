@@ -9,7 +9,8 @@ class ThumbsViewlet(BrowserView):
     """
     Render the thumbs view, but using the viewlet arch
     """
-    render = ViewPageTemplateFile('templates/thumbs_viewlet.pt')
+
+    render = ViewPageTemplateFile("templates/thumbs_viewlet.pt")
 
     def __init__(self, context, request, view=None, manager=None):
         super().__init__(context, request)

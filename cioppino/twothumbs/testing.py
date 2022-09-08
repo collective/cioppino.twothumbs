@@ -12,17 +12,19 @@ class TwoThumbs(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         # Load ZCML
         import cioppino.twothumbs
-        xmlconfig.file('configure.zcml',
-                       cioppino.twothumbs,
-                       context=configurationContext,
-                       )
+
+        xmlconfig.file(
+            "configure.zcml",
+            cioppino.twothumbs,
+            context=configurationContext,
+        )
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'cioppino.twothumbs:default')
+        applyProfile(portal, "cioppino.twothumbs:default")
 
 
 TWOTHUMBS_FIXTURE = TwoThumbs()
 TWOTHUMBS_INTEGRATION_TESTING = IntegrationTesting(
     bases=(TWOTHUMBS_FIXTURE,),
-    name='TwoThumbs:Integration',
+    name="TwoThumbs:Integration",
 )

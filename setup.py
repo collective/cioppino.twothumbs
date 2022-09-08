@@ -2,14 +2,14 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-version = '3.0.0.dev0'
+version = "3.0.0.dev0"
 with open("README.rst") as myfile:
     description = myfile.read() + "\n"
 with open("CHANGES.rst") as myfile:
     description += myfile.read()
 
 setup(
-    name='cioppino.twothumbs',
+    name="cioppino.twothumbs",
     version=version,
     description="Rating widget based on thumbs up and down.",
     long_description=description,
@@ -30,22 +30,22 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
-    keywords='rating, content, thumbs',
-    author='eleddy',
-    author_email='elizabeth.leddy@gmail.com',
-    url='https://github.com/collective/cioppino.twothumbs',
-    license='GPL',
-    packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['cioppino'],
+    keywords="rating, content, thumbs",
+    author="eleddy",
+    author_email="elizabeth.leddy@gmail.com",
+    url="https://github.com/collective/cioppino.twothumbs",
+    license="GPL",
+    packages=find_packages(exclude=["ez_setup"]),
+    namespace_packages=["cioppino"],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Plone',
-        'plone.behavior',
-        'setuptools',
-        'six',
+        "Plone",
+        "plone.behavior",
+        "setuptools",
+        "six",
     ],
-    extras_require={'test': ['plone.app.testing']},
+    extras_require={"test": ["plone.app.testing"]},
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
