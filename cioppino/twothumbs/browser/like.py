@@ -38,7 +38,8 @@ class LikeWidgetView(BrowserView):
         if registry.get("cioppino.twothumbs.anonymousvoting", False):
             return True
         portal_state = getMultiAdapter(
-            (self.context, self.request), name="plone_portal_state"
+            (self.context, self.request),
+            name="plone_portal_state",
         )
         return not portal_state.anonymous()
 
@@ -53,7 +54,8 @@ class LikeWidgetView(BrowserView):
         if not self.canRate():
             return 0
         portal_state = getMultiAdapter(
-            (self.context, self.request), name="plone_portal_state"
+            (self.context, self.request),
+            name="plone_portal_state",
         )
         anonuid = None
         if portal_state.anonymous():
@@ -69,14 +71,18 @@ class LikeThisShizzleView(BrowserView):
         anonuid = None
         anonymous_voting = registry.get("cioppino.twothumbs.anonymousvoting", False)
         portal_state = getMultiAdapter(
-            (self.context, self.request), name="plone_portal_state"
+            (self.context, self.request),
+            name="plone_portal_state",
         )
 
         if portal_state.anonymous():
             if not anonymous_voting:
                 return RESPONSE.redirect(
                     "{0}/login?came_from={0}".format(
-                        (portal_state.portal_url(), REQUEST["HTTP_REFERER"])
+                        (
+                            portal_state.portal_url(),
+                            REQUEST["HTTP_REFERER"],
+                        ),
                     ),
                 )
             else:
@@ -94,7 +100,7 @@ class LikeThisShizzleView(BrowserView):
         else:
             return _(
                 "We don't like ambiguity around here. Check yo self "
-                "before you wreck yo self."
+                "before you wreck yo self.",
             )
 
         if not form.get("ajax", False):
