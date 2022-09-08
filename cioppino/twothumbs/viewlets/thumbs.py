@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.interface import implementer
@@ -10,8 +9,9 @@ class ThumbsViewlet(BrowserView):
     """
     Render the thumbs view, but using the viewlet arch
     """
-    render = ViewPageTemplateFile('templates/thumbs_viewlet.pt')
+
+    render = ViewPageTemplateFile("templates/thumbs_viewlet.pt")
 
     def __init__(self, context, request, view=None, manager=None):
-        super(ThumbsViewlet, self).__init__(context, request)
+        super().__init__(context, request)
         self.context = context

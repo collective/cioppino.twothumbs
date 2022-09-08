@@ -5,3 +5,7 @@ max-line-length = 100000
 extend-ignore =
     # See https://github.com/PyCQA/pycodestyle/issues/373
     E203,
+    # C101 Coding magic comment not found
+    C101,
+    # Q000 Double quotes found but single quotes preferred
+    Q000,

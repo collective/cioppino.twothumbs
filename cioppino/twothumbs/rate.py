@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from BTrees.OIBTree import OIBTree
 from cioppino.twothumbs.event import DislikeEvent
 from cioppino.twothumbs.event import LikeEvent
@@ -14,8 +13,8 @@ from zope.interface.declarations import alsoProvides
 
 # The name of the annotation fields, namespaces so
 # we can avoid conflicts
-yays = 'cioppino.twothumbs.yays'
-nays = 'cioppino.twothumbs.nays'
+yays = "cioppino.twothumbs.yays"
+nays = "cioppino.twothumbs.nays"
 
 
 def setupAnnotations(context):
@@ -53,21 +52,21 @@ def loveIt(context, userid=None):
 
     if not userid:
         if api.user.is_anonymous():
-            raise ValueError('userid must be passed activly for anon users')
+            raise ValueError("userid must be passed activly for anon users")
         userid = api.user.get_current().id
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
 
     if userid in annotations[yays]:
         annotations[yays].pop(userid)
-        action = 'undo'
+        action = "undo"
         event.notify(UnlikeEvent(context))
     else:
         annotations[yays][userid] = 1
-        action = 'like'
+        action = "like"
         event.notify(LikeEvent(context))
 
-    context.reindexObject(idxs=['positive_ratings'])
+    context.reindexObject(idxs=["positive_ratings"])
     return action
 
 
@@ -87,14 +86,14 @@ def hateIt(context, userid=None):
 
     if userid in annotations[nays]:
         annotations[nays].pop(userid)
-        action = 'undo'
+        action = "undo"
         event.notify(UndislikeEvent(context))
     else:
         annotations[nays][userid] = 1
-        action = 'dislike'
+        action = "dislike"
         event.notify(DislikeEvent(context))
 
-    context.reindexObject(idxs=['positive_ratings'])
+    context.reindexObject(idxs=["positive_ratings"])
     return action
 
 
@@ -105,9 +104,9 @@ def getTally(context):
     setupAnnotations(context)
     annotations = IAnnotations(context)
     return {
-        'ups': len(annotations[yays]),
-        'downs': len(annotations[nays]),
-        'mine': getMyVote(context),
+        "ups": len(annotations[yays]),
+        "downs": len(annotations[nays]),
+        "mine": getMyVote(context),
     }
 
 

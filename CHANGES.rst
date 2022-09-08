@@ -4,8 +4,27 @@ Changelog
 3.0.0 (unreleased)
 ------------------
 
+- Add compatibility with Plone 6.0.
+  Keep compatibility with Plone 5.2, but only on Python 3.
+  [maurits]
+
+- Fix mismatch between upgrade step and metadata version.
+  Fixes `issue 31 <https://github.com/collective/cioppino.twothumbs/issues/31>`_ for version 3.
+  [maurits]
+
+
+2.2.5 (2022-08-08)
+------------------
+
 - Fix mismatch between upgrade step and metadata version.
   Fixes `issue 31 <https://github.com/collective/cioppino.twothumbs/issues/31>`_.
+  [maurits]
+
+- Create branch 2.x on which I revert changes made after 2.2.1.
+  This restores compatibility with Plone 5.2 on Python 2.7.
+  Also Plone 4.3, 5.0 and 5.1 should still work.
+  The master branch will be for Plone 5.2 and 6.0 on Python 3.
+  See `issue 35 <https://github.com/collective/cioppino.twothumbs/issues/35>`_.
   [maurits]
 
 
