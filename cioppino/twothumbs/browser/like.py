@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from cioppino.twothumbs import _
 from cioppino.twothumbs import rate
 from plone.registry.interfaces import IRegistry
@@ -90,7 +89,7 @@ class LikeThisShizzleView(BrowserView):
         elif form.get('form.hatedit', False):
             action = rate.hateIt(self.context, userid=anonuid)
         else:
-            return _(u"We don't like ambiguity around here. Check yo self "
+            return _("We don't like ambiguity around here. Check yo self "
                      'before you wreck yo self.')
 
         if not form.get('ajax', False):
@@ -107,7 +106,7 @@ class LikeThisShizzleView(BrowserView):
                 context=self.request,
             )
             tally['close'] = translate(
-                _(u'Close'),
+                _('Close'),
                 context=self.request,
             )
 
@@ -128,8 +127,8 @@ class LikeThisShizzleView(BrowserView):
 
     def _getMessage(self, action):
         if (action == 'like'):
-            return _(u'You liked this. Thanks for the feedback!')
+            return _('You liked this. Thanks for the feedback!')
         elif (action == 'dislike'):
-            return _(u'You dislike this. Thanks for the feedback!')
+            return _('You dislike this. Thanks for the feedback!')
         elif (action == 'undo'):
-            return _(u'Your vote has been removed.')
+            return _('Your vote has been removed.')

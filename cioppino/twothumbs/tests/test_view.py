@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from cioppino.twothumbs.testing import TWOTHUMBS_INTEGRATION_TESTING
 
 import unittest

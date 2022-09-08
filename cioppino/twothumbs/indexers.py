@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
 from plone.indexer.decorator import indexer
 
