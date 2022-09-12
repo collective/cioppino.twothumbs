@@ -24,7 +24,7 @@ msgstr "${login} om te stemmen ${close-link}"
 
 #: ./configure.zcml:38
 msgid "Adds the ability to rate content based on facebook-like thumbs."
-msgstr "Voegt de mogelijkheid to om content leuk of niet leuk te vinden."
+msgstr "Voegt de mogelijkheid toe om content leuk of niet leuk te vinden."
 
 #: ./browser/like.py:109
 #: ./browser/templates/login_to_rate.pt:18

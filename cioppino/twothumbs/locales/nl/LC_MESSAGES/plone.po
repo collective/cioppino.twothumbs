@@ -24,8 +24,8 @@ msgstr "Metadata"
 
 #: profiles/base/registry.xml
 msgid "Positive ratings"
-msgstr "Ik vind dit leuk"
+msgstr "Vind ik leuk"
 
 #: profiles/base/registry.xml
 msgid "positive_ratings"
-msgstr "Ik vind dit leuk"
+msgstr "Vind ik leuk"
